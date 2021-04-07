@@ -18,8 +18,11 @@ public class HomePageActivity extends AppCompatActivity {
 
         recyclerview_homeone = findViewById(R.id.recyclerview_homeone);
         ArrayList<HomeItem> homeItems = new ArrayList<>();
-        homeItems.add(new HomeItem("Dog Food"));
-        homeItems.add(new HomeItem("Wet Dog Food"));
+        homeItems.add(new HomeItem("For you"));
+        homeItems.add(new HomeItem("Latest"));
+        homeItems.add(new HomeItem("Following"));
+        homeItems.add(new HomeItem("Food design"));
+        homeItems.add(new HomeItem("Beverageposter"));
 
 
         // ok and getapplication ke getapplicationcontext ee new activity mate use na thai ok
