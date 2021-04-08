@@ -101,6 +101,7 @@
                         android:layout_marginTop="144dp"
                         android:src="@color/green"
                         app:civ_border_color="#FF000000"
+
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
