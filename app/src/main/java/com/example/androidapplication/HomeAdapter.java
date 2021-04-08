@@ -27,19 +27,19 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = inflater.inflate(R.layout.home_itemone,viewGroup,false);
-
         return new  ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull HomeAdapter.ViewHolder holder, int position) {
-
+        final HomeItem homeItem = homeItems.get(holder.getAdapterPosition());
+        holder.h_text.setText(homeItem.getName());
     }
 
 
     @Override
     public int getItemCount() {
-        return 0;
+        return homeItems.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

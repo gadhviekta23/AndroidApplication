@@ -11,6 +11,7 @@
         android:theme="@style/Day1Theme.AndroidApplication">
         <activity android:name=".LoginActivity"/>
         <activity android:name=".SelectFCActivity"/>
+        <activity android:name=".HomePageActivity"/>
         <activity android:name=".Splash_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
