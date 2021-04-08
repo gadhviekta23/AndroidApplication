@@ -8,13 +8,13 @@
         android:id="@+id/h_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ALL"
-        android:textSize="20dp"
-        android:background="@drawable/gradent_selectitem"
         android:padding="10dp"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="ALL"
+        android:textColor="@color/black"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
