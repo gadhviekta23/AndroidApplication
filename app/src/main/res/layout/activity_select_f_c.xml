@@ -25,9 +25,6 @@
         app:layout_constraintTop_toBottomOf="@id/favourite_search"
         tools:layout_editor_absoluteX="-32dp">
 
-
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -213,8 +210,8 @@
                         android:layout_height="70dp"
                         android:src="@color/purple_200"
                         app:civ_border_color="#FF000000"
-                        tools:layout_editor_absoluteX="246dp"
-                        tools:layout_editor_absoluteY="378dp" />
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
