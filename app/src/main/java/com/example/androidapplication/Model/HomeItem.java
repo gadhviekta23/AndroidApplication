@@ -1,4 +1,4 @@
-package com.example.androidapplication;
+package com.example.androidapplication.Model;
 
 public class HomeItem {
     String name;

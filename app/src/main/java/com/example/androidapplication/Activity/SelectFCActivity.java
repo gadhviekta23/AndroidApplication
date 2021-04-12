@@ -1,13 +1,15 @@
-package com.example.androidapplication;
+package com.example.androidapplication.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.PorterDuff;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.example.androidapplication.Activity.HomePageActivity;
+import com.example.androidapplication.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 

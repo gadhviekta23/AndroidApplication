@@ -1,4 +1,4 @@
-package com.example.androidapplication;
+package com.example.androidapplication.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.androidapplication.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -26,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(LoginActivity.this,SelectFCActivity.class);
+                Intent in = new Intent(LoginActivity.this, SelectFCActivity.class);
                 startActivity(in);
             }
         });
