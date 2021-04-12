@@ -1,4 +1,4 @@
-package com.example.androidapplication;
+package com.example.androidapplication.Adapter;
 
 import android.content.Context;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.androidapplication.Model.HomeItem_two;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.androidapplication;
+package com.example.androidapplication.Model;
 
 public class HomeItem_two {
     String image;

@@ -1,4 +1,4 @@
-package com.example.androidapplication;
+package com.example.androidapplication.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
+
+import com.example.androidapplication.R;
 
 public class Splash_Screen extends AppCompatActivity {
     ImageView splash_image;
