@@ -43,6 +43,7 @@ public class SettingActivity extends AppCompatActivity {
         first=findViewById(R.id.first);
         second=findViewById(R.id.second);
         third=findViewById(R.id.third);
+
         forth=findViewById(R.id.forth);
 
         first.setOnClickListener(new View.OnClickListener() {
