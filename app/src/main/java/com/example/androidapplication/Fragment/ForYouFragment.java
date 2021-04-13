@@ -14,6 +14,8 @@ public class ForYouFragment extends Fragment {
     RecyclerView recyclerview_hometwo;
     View view;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_for_you, container, false);
