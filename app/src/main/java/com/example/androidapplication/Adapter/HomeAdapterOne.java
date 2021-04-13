@@ -12,8 +12,10 @@ import com.example.androidapplication.Model.HomeItem_two;
 import java.util.ArrayList;
 
 public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHolder> {
-
+    Context context;
+    ArrayList<HomeItem_two> homeItem1;
     public HomeAdapterOne(Context context, ArrayList<HomeItem_two> homeItem1) {
+        this.context=context;
     }
 
     @NonNull
@@ -30,11 +32,14 @@ public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHold
     @Override
     public int getItemCount() {
         return 0;
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+
         }
     }
 }

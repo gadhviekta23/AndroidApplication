@@ -65,7 +65,10 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
         if(row_index==position){
             holder.h_text.setBackgroundResource(R.drawable.gradent_selectitem);
-            holder.h_text.setTextColor(Color.WHITE);        }
+            holder.h_text.setTextColor(Color.WHITE);
+        }else{
+            holder.h_text.setTextColor(Color.BLACK);
+        }
     }
 
 
