@@ -12,6 +12,7 @@ import com.example.androidapplication.R;
 import com.mikhaellopez.circularimageview.CircularImageView;
 
 public class editprofile extends AppCompatActivity {
+
     TextView edit_txt,fname_txt,surname_txt,username_txt,about_you_txt,location_txt,website_txt;
     Button btn,done_btn,edit_btn;
     CircularImageView profile_image;
