@@ -13,7 +13,7 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 
 public class editprofile extends AppCompatActivity {
 
-    TextView edit_txt,fname_txt,surname_txt,username_txt,about_you_txt,location_txt,website_txt;
+    TextView fname_txt,surname_txt,username_txt,about_you_txt,location_txt,website_txt;
     Button btn,done_btn,edit_btn;
     CircularImageView profile_image;
 
@@ -22,7 +22,6 @@ public class editprofile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editprofile);
         //Textview
-        edit_txt=findViewById(R.id.edit_txt);
         fname_txt=findViewById(R.id.fname_txt);
         surname_txt=findViewById(R.id.surname_txt);
         username_txt=findViewById(R.id.username_txt);
@@ -32,7 +31,7 @@ public class editprofile extends AppCompatActivity {
 
         //Button
         btn=findViewById(R.id.btn);
-        done_btn=findViewById(R.id.done_btn);
+       // done_btn=findViewById(R.id.done_btn);
         edit_btn=findViewById(R.id.edit_btn);
 
         //CircularImageView

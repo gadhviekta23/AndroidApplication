@@ -10,11 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Day1Theme.AndroidApplication">
         <activity android:name=".Activity.editprofile" />
-        <activity android:name=".Activity.SettingActivity" />
+        <activity android:name=".Activity.Splash_Screen" />
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.SelectFCActivity" />
         <activity android:name=".Activity.HomePageActivity" />
-        <activity android:name=".Activity.Splash_Screen">
+        <activity android:name=".Activity.SettingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
