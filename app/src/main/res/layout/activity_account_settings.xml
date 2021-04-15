@@ -7,109 +7,358 @@
     android:layout_height="match_parent"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="0dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.activity_account_settings">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/backarrow"
+        android:layout_marginLeft="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/first"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".editprofile">
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/btn"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/account_settings_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Account settings" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/two"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100sp"
+            android:layout_height="93dp"
+            android:src="@drawable/bbt"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_txt" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/two"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bhargav Tank"
+            android:textSize="23dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/three"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/email_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="22dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|right">
 
         <Button
-            android:id="@+id/btn"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@drawable/backarrow"
-            android:layout_marginLeft="10dp"/>
+            android:id="@+id/email_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/rightarrow"
+            />
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/five"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/four"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/password_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="22dp" />
 
         <LinearLayout
-            android:id="@+id/first"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="@+id/btn"
-            app:layout_constraintTop_toTopOf="parent"
-            android:gravity="center">
-
-
-
-            <TextView
-                android:id="@+id/account_settings_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Account settings" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/second"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/first"
-            android:gravity="center">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/profile_image"
-                android:layout_width="100sp"
-                android:layout_height="130dp"
-                android:src="@drawable/bbt"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_txt"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#FF000000" />
-
-            <TextView
-                android:id="@+id/name_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bhargav Tank"
-                android:textSize="25dp"
-
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/third"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/second"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:id="@+id/email_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Email"
-                android:textSize="25dp"
-                android:layout_marginLeft="10dp" />
+            android:gravity="center|right">
 
             <Button
-                android:id="@+id/edit_btn"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
+                android:id="@+id/password_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/rightarrow"
-                android:layout_marginLeft="250dp"
-                android:layout_marginTop="5dp"/>
-
+                />
         </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/six"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/five"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/country_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country/Region"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|right">
+
+            <Button
+                android:id="@+id/country_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rightarrow"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seven"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/six"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/gender_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|right">
+
+            <Button
+                android:id="@+id/gender_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rightarrow"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seven"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/login_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login options"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|right">
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rightarrow"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eight"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/claimed_account_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Claimed account"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|right">
+
+            <Button
+                android:id="@+id/claimed_account_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rightarrow"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nine"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/app_theme_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="App theme"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|right">
+
+            <Button
+                android:id="@+id/app_theme_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rightarrow"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eleven"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ten"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/deactivate_account_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deactivate account"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|right">
+
+            <Button
+                android:id="@+id/deactivate_account_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rightarrow"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/twelve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eleven"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/close_account_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close account"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|right">
+
+            <Button
+                android:id="@+id/close_account_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rightarrow"
+                />
+        </LinearLayout>
+    </LinearLayout>
 
 
-
-
-
-
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
