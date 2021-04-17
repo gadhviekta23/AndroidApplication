@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.email_activity">
+    tools:context=".Activity.c_name">
 
     <Button
         android:id="@+id/btn"
@@ -17,7 +17,7 @@
         android:layout_margin="7dp"/>
 
     <LinearLayout
-        android:id="@+id/email"
+        android:id="@+id/contact_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -29,7 +29,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
+            android:text="Contact name"
             android:textSize="23dp" />
 
     </LinearLayout>
@@ -45,25 +45,24 @@
         android:layout_marginRight="10dp"/>
 
     <TextView
-        android:id="@+id/email_txt"
+        android:id="@+id/contact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn"
-        android:text="Email"
+        android:text="Contact name"
         android:textSize="19dp"
         android:layout_margin="15dp"/>
 
     <EditText
-        android:id="@+id/add_email"
+        android:id="@+id/add_contact_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_txt"
+        app:layout_constraintTop_toBottomOf="@+id/contact"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:textSize="20dp"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

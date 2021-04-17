@@ -14,9 +14,9 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 
 public class activity_account_settings extends AppCompatActivity {
 
-    LinearLayout first,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve;
-    TextView account_settings_txt,name_txt,email_txt,password_txt,country_txt,gender_txt,login_txt,claimed_account_txt,app_theme_txt,deactivate_account_txt,close_account_txt;
-    Button btn,email_btn,password_btn,country_btn,gender_btn,login_btn,claimed_account_btn,app_theme_btn,deactivate_account_btn,close_account_btn;
+    LinearLayout first,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen;
+    TextView account_settings_txt,name_txt,email_txt,password_txt,country_txt,gender_txt,business_type,contact_name,login_txt,claimed_account_txt,app_theme_txt,deactivate_account_txt,close_account_txt;
+    Button btn,email_btn,password_btn,country_btn,gender_btn,business_type_btn,contact_name_btn,login_btn,claimed_account_btn,app_theme_btn,deactivate_account_btn,close_account_btn;
     CircularImageView profile_image;
 
     @Override
@@ -37,6 +37,8 @@ public class activity_account_settings extends AppCompatActivity {
         ten=findViewById(R.id.ten);
         eleven=findViewById(R.id.eleven);
         twelve=findViewById(R.id.twelve);
+        thirteen=findViewById(R.id.thirteen);
+        fourteen=findViewById(R.id.fourteen);
 
         //TextView
         account_settings_txt=findViewById(R.id.account_settings_txt);
@@ -45,6 +47,8 @@ public class activity_account_settings extends AppCompatActivity {
         password_txt=findViewById(R.id.password_txt);
         country_txt=findViewById(R.id.country_txt);
         gender_txt=findViewById(R.id.gender_txt);
+        business_type=findViewById(R.id.business_type);
+        contact_name=findViewById(R.id.contact_name);
         login_txt=findViewById(R.id.login_txt);
         claimed_account_txt=findViewById(R.id.claimed_account_txt);
         app_theme_txt=findViewById(R.id.app_theme_txt);
@@ -57,6 +61,8 @@ public class activity_account_settings extends AppCompatActivity {
         password_btn=findViewById(R.id.password_btn);
         country_btn=findViewById(R.id.country_btn);
         gender_btn=findViewById(R.id.gender_btn);
+        business_type_btn=findViewById(R.id.business_type_btn);
+        contact_name_btn=findViewById(R.id.contact_name_btn);
         login_btn=findViewById(R.id.login_btn);
         claimed_account_btn=findViewById(R.id.claimed_account_btn);
         app_theme_btn=findViewById(R.id.app_theme_btn);
@@ -82,5 +88,44 @@ public class activity_account_settings extends AppCompatActivity {
             }
         });
 
+        five.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(activity_account_settings.this,password.class);
+                startActivity(intent);
+            }
+        });
+
+        six.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(activity_account_settings.this,country.class);
+                startActivity(intent);
+            }
+        });
+
+        seven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(activity_account_settings.this,gender.class);
+                startActivity(intent);
+            }
+        });
+
+        eight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(activity_account_settings.this,Business_type.class);
+                startActivity(intent);
+            }
+        });
+
+        nine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(activity_account_settings.this, c_name.class);
+                startActivity(intent);
+            }
+        });
     }
 }
