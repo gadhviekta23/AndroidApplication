@@ -13,6 +13,7 @@ import android.widget.FrameLayout;
 import com.example.androidapplication.Adapter.HomeAdapter;
 import com.example.androidapplication.Adapter.HomeAdapterOne;
 import com.example.androidapplication.Fragment.ForYouFragment;
+import com.example.androidapplication.Fragment.LatestFragment;
 import com.example.androidapplication.Model.HomeItem;
 import com.example.androidapplication.Model.HomeItem_two;
 import com.example.androidapplication.R;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
 
 public class HomePageActivity extends AppCompatActivity {
     private FrameLayout frameLayout;
-    RecyclerView recyclerview_homeone,recyclerview_hometwo;
+    public RecyclerView recyclerview_homeone;
     HomeAdapter homeAdapter;
     HomeAdapterOne homeAdapterOne;
     @Override
@@ -46,30 +47,25 @@ public class HomePageActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
         //I added this if statement to keep the selected fragment when rotating the device
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new ForYouFragment()).commit();
-        }
 
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected( MenuItem item) {
-                    Fragment selectedFragment = null;
+                    Fragment fragment = null;
                     switch (item.getItemId()) {
                         case R.id.nav_home:
-                            selectedFragment = new ForYouFragment();
+                            fragment = new ForYouFragment();
                             break;
                         case R.id.nav_favorites:
-                            selectedFragment = new ForYouFragment();
+                            fragment = new LatestFragment();
                             break;
                         case R.id.nav_search:
-                            selectedFragment = new ForYouFragment();
+                            fragment = new ForYouFragment();
                             break;
                     }
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                            selectedFragment).commit();
+                    loadFragment(fragment);
                     return true;
                 }
             };

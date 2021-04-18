@@ -49,6 +49,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
         holder.h_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                homePageActivity.recyclerview_homeone.getLayoutManager().scrollToPosition(holder.getAdapterPosition());
 
                 if (holder.getAdapterPosition()==0){
                     homePageActivity.loadFragment(new ForYouFragment());
@@ -67,6 +68,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             holder.h_text.setBackgroundResource(R.drawable.gradent_selectitem);
             holder.h_text.setTextColor(Color.WHITE);
         }else{
+            holder.h_text.setBackgroundResource(R.drawable.gradent_unselectitem);
             holder.h_text.setTextColor(Color.BLACK);
         }
     }

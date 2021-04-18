@@ -1,23 +1,25 @@
 package com.example.androidapplication.Model;
 
 public class HomeItem_two {
-    String image;
-
+    int image;
     String title;
-
-    String like;
-
+    int like;
+    int setting;
     String line_number;
 
-    public HomeItem_two(int nature1, String this_is_image, int heart, String s) {
-
+    public HomeItem_two(int image, String title, int like, String line_number ,int setting) {
+        this.image = image;
+        this.title = title;
+        this.like = like;
+        this.setting = setting;
+        this.line_number = line_number;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
@@ -29,11 +31,11 @@ public class HomeItem_two {
         this.title = title;
     }
 
-    public String getLike() {
+    public int getLike() {
         return like;
     }
 
-    public void setLike(String like) {
+    public void setLike(int like) {
         this.like = like;
     }
 
@@ -43,5 +45,13 @@ public class HomeItem_two {
 
     public void setLine_number(String line_number) {
         this.line_number = line_number;
+    }
+
+    public int getSetting() {
+        return setting;
+    }
+
+    public void setSetting(int setting) {
+        this.setting = setting;
     }
 }
