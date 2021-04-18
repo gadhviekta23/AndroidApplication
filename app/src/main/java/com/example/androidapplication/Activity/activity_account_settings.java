@@ -127,5 +127,29 @@ public class activity_account_settings extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ten.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(activity_account_settings.this,login_option.class);
+                startActivity(intent);
+            }
+        });
+
+        eleven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(activity_account_settings.this,claimed_accounts.class);
+                startActivity(intent);
+            }
+        });
+
+        twelve.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(activity_account_settings.this, application_theme.class);
+                startActivity(intent);
+            }
+        });
     }
 }

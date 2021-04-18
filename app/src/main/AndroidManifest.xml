@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Day1Theme.AndroidApplication">
-        <activity android:name=".Activity.c_name"></activity>
+        <activity android:name=".Activity.application_theme"></activity>
+        <activity android:name=".Activity.claimed_accounts" />
+        <activity android:name=".Activity.login_option" />
+        <activity android:name=".Activity.c_name" />
         <activity android:name=".Activity.Business_type" />
         <activity android:name=".Activity.gender" />
         <activity android:name=".Activity.country" />
