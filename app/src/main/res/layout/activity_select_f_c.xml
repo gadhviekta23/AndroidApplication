@@ -20,20 +20,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
+        android:id="@+id/relativelayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toBottomOf="@id/favourite_search">
-
-
-        <LinearLayout
-            android:id="@+id/bubbls"
-            android:paddingTop="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent">
-
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/favourite_search"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
             <HorizontalScrollView
+                android:id="@+id/hsv"
                 android:layout_width="match_parent"
+                android:screenReaderFocusable="false"
                 android:layout_height="wrap_content">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -290,28 +286,28 @@
 
             </HorizontalScrollView>
 
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/chhose_cat"
-            android:layout_marginTop="60dp"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/bubbls"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:padding="30dp"
-            android:text="Choose Catagories that represent what you want to see"/>
-
-        <Button
-            android:id="@+id/button"
-            android:layout_below="@+id/chhose_cat"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:background="@drawable/button_style"
-            android:text="Continue"/>
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/chhose_cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button"
+        android:layout_margin="10dp"
+        android:text="Choose Catagories that represent what you want to see"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_style"
+        android:text="Continue" />
 </androidx.constraintlayout.widget.ConstraintLayout>
