@@ -1,55 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_margin="10dp">
 
-    <VideoView
-        android:id="@+id/video_HIT"
-        android:layout_width="200dp"
-        android:layout_height="370dp"
+<!--    <VideoView-->
+<!--        android:id="@+id/image_HIT"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="200dp"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <ImageView
+        android:id="@+id/image_HIT"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/gradient_border"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_HIT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/video_HIT"
-        android:text="Women Plaid Lace Patch"
         android:layout_margin="10dp"
-        />
+        android:maxLength="15"
+        android:text="Women Plaid Lace Patch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_HIT" />
 
     <ImageView
         android:id="@+id/setting_HIT"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        app:layout_constraintLeft_toRightOf="@+id/text_HIT"
+        android:layout_marginTop="10dp"
         android:src="@drawable/dot"
-        app:layout_constraintTop_toBottomOf="@id/video_HIT"
-        />
+        app:layout_constraintLeft_toRightOf="@+id/text_HIT"
+        app:layout_constraintTop_toBottomOf="@id/image_HIT" />
+
     <ImageView
         android:id="@+id/heart_img"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/video_HIT"
-        android:src="@drawable/heart"
         android:layout_marginTop="30dp"
-        />
+        android:padding="2dp"
+        android:src="@drawable/heart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_HIT" />
+
     <TextView
         android:id="@+id/text_like"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:textSize="12dp"
+        android:text="100k"
         app:layout_constraintLeft_toRightOf="@+id/heart_img"
-        app:layout_constraintTop_toBottomOf="@+id/text_HIT"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/text_HIT" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
