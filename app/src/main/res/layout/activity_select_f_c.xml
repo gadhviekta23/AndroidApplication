@@ -24,6 +24,7 @@
         android:layout_height="match_parent"
         app:layout_constraintTop_toBottomOf="@id/favourite_search">
 
+
         <LinearLayout
             android:id="@+id/bubbls"
             android:paddingTop="25dp"
