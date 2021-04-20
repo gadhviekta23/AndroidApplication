@@ -47,7 +47,7 @@ public class Business_type extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Business_type.this,activity_account_settings.class);
+                Intent intent=new Intent(Business_type.this, Account_settings.class);
                 startActivity(intent);
             }
         });

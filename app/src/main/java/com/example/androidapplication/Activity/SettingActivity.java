@@ -49,7 +49,7 @@ public class SettingActivity extends AppCompatActivity {
         first.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SettingActivity.this, editprofile.class);
+                Intent intent=new Intent(SettingActivity.this, Editprofile.class);
                 startActivity(intent);
             }
         });
@@ -57,8 +57,16 @@ public class SettingActivity extends AppCompatActivity {
         second.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SettingActivity.this,activity_account_settings.class);
+                Intent intent=new Intent(SettingActivity.this, Account_settings.class);
                startActivity(intent);
+            }
+        });
+
+        third.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SettingActivity.this, NotificationActivity.class);
+                startActivity(intent);
             }
         });
 

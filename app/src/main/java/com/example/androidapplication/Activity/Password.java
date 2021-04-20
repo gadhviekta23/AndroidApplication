@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.example.androidapplication.R;
 
-public class password extends AppCompatActivity {
+public class Password extends AppCompatActivity {
 
     Button btn,done_btn,show_cpass,show_npass,show_cnpass;
     TextView cpass_txt,forget_pass,npass_txt,cnpass_txt;
@@ -48,7 +48,7 @@ public class password extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(password.this,activity_account_settings.class);
+                Intent intent=new Intent(Password.this, Account_settings.class);
                 startActivity(intent);
             }
         });

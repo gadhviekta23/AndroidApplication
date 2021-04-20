@@ -12,37 +12,38 @@ import android.widget.TextView;
 
 import com.example.androidapplication.R;
 
-public class email_activity extends AppCompatActivity {
+public class C_name extends AppCompatActivity {
 
     Button btn,done_btn;
-    LinearLayout email;
-    TextView email_txt;
-    EditText add_email;
+    TextView contact;
+    EditText add_contact_name;
+    LinearLayout contact_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_email_activity);
+        setContentView(R.layout.activity_contact_name);
 
         //Button
         btn=findViewById(R.id.btn);
         done_btn=findViewById(R.id.done_btn);
 
-        //LinerLayout
-        email=findViewById(R.id.email);
-
         //TextView
-        email_txt=findViewById(R.id.email_txt);
+        contact=findViewById(R.id.contact);
 
         //EditText
-        add_email=findViewById(R.id.add_email);
+        add_contact_name=findViewById(R.id.add_contact_name);
+
+        //LinearLayout
+        contact_name=findViewById(R.id.contact_name);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(email_activity.this,activity_account_settings.class);
+                Intent intent=new Intent(C_name.this, Account_settings.class);
                 startActivity(intent);
             }
         });
+
     }
 }

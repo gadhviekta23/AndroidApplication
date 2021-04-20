@@ -12,37 +12,37 @@ import android.widget.RadioGroup;
 
 import com.example.androidapplication.R;
 
-public class application_theme extends AppCompatActivity {
+public class Gender extends AppCompatActivity {
 
-    Button btn;
-    LinearLayout theme;
-    RadioGroup app_theme;
-    RadioButton system_default,light,dark;
-
+    Button btn,done_btn;
+    RadioGroup gender_btn;
+    RadioButton male,female,non_binary;
+    LinearLayout gender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_app_theme);
+        setContentView(R.layout.activity_gender);
 
         //Button
         btn=findViewById(R.id.btn);
-
-        //LinearLayout
-        theme=findViewById(R.id.theme);
+        done_btn=findViewById(R.id.done_btn);
 
         //RadioGroup
-        app_theme=findViewById(R.id.app_theme);
+        gender_btn=findViewById(R.id.gender_btn);
 
         //RadioButton
-        system_default=findViewById(R.id.system_default);
-        light=findViewById(R.id.light);
-        dark=findViewById(R.id.dark);
+        male=findViewById(R.id.male);
+        female=findViewById(R.id.female);
+        non_binary=findViewById(R.id.non_binary);
+
+        //LinearLayout
+        gender=findViewById(R.id.gender);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(application_theme.this,activity_account_settings.class);
+                Intent intent=new Intent(Gender.this, Account_settings.class);
                 startActivity(intent);
             }
         });

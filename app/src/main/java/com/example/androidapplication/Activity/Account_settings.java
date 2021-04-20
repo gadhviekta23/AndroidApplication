@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.example.androidapplication.R;
 import com.mikhaellopez.circularimageview.CircularImageView;
 
-public class activity_account_settings extends AppCompatActivity {
+public class Account_settings extends AppCompatActivity {
 
     LinearLayout first,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen;
     TextView account_settings_txt,name_txt,email_txt,password_txt,country_txt,gender_txt,business_type,contact_name,login_txt,claimed_account_txt,app_theme_txt,deactivate_account_txt,close_account_txt;
@@ -75,7 +75,7 @@ public class activity_account_settings extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(activity_account_settings.this,SettingActivity.class);
+                Intent intent=new Intent(Account_settings.this,SettingActivity.class);
                 startActivity(intent);
             }
         });
@@ -83,7 +83,7 @@ public class activity_account_settings extends AppCompatActivity {
         four.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(activity_account_settings.this,email_activity.class);
+                Intent intent=new Intent(Account_settings.this, Email_activity.class);
                 startActivity(intent);
             }
         });
@@ -91,7 +91,7 @@ public class activity_account_settings extends AppCompatActivity {
         five.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(activity_account_settings.this,password.class);
+                Intent intent=new Intent(Account_settings.this, Password.class);
                 startActivity(intent);
             }
         });
@@ -99,7 +99,7 @@ public class activity_account_settings extends AppCompatActivity {
         six.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(activity_account_settings.this,country.class);
+                Intent intent=new Intent(Account_settings.this, Country.class);
                 startActivity(intent);
             }
         });
@@ -107,7 +107,7 @@ public class activity_account_settings extends AppCompatActivity {
         seven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(activity_account_settings.this,gender.class);
+                Intent intent=new Intent(Account_settings.this, Gender.class);
                 startActivity(intent);
             }
         });
@@ -115,7 +115,7 @@ public class activity_account_settings extends AppCompatActivity {
         eight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(activity_account_settings.this,Business_type.class);
+                Intent intent=new Intent(Account_settings.this,Business_type.class);
                 startActivity(intent);
             }
         });
@@ -123,7 +123,7 @@ public class activity_account_settings extends AppCompatActivity {
         nine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(activity_account_settings.this, c_name.class);
+                Intent intent=new Intent(Account_settings.this, C_name.class);
                 startActivity(intent);
             }
         });
@@ -131,7 +131,7 @@ public class activity_account_settings extends AppCompatActivity {
         ten.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(activity_account_settings.this,login_option.class);
+                Intent intent=new Intent(Account_settings.this,login_option.class);
                 startActivity(intent);
             }
         });
@@ -139,7 +139,7 @@ public class activity_account_settings extends AppCompatActivity {
         eleven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(activity_account_settings.this,claimed_accounts.class);
+                Intent intent=new Intent(Account_settings.this, Claimed_accounts.class);
                 startActivity(intent);
             }
         });
@@ -147,7 +147,23 @@ public class activity_account_settings extends AppCompatActivity {
         twelve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(activity_account_settings.this, application_theme.class);
+                Intent intent=new Intent(Account_settings.this, Application_theme.class);
+                startActivity(intent);
+            }
+        });
+
+        thirteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Account_settings.this, Deactivate_account.class );
+                startActivity(intent);
+            }
+        });
+
+        fourteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Account_settings.this, Close_account.class );
                 startActivity(intent);
             }
         });
