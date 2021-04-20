@@ -25,6 +25,8 @@
         app:layout_constraintTop_toBottomOf="@id/favourite_search">
 
         <LinearLayout
+            android:id="@+id/bubbls"
+            android:paddingTop="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent">
@@ -289,6 +291,26 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/chhose_cat"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bubbls"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:padding="30dp"
+            android:text="Choose Catagories that represent what you want to see"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_below="@+id/chhose_cat"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/button_style"
+            android:text="Continue"/>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

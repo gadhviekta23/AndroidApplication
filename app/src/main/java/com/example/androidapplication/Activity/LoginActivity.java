@@ -14,10 +14,10 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class LoginActivity extends AppCompatActivity {
     ImageView image;
-    TextView text_welcome,text_dw;
-    CircleImageView img_facebbok,img_google;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        TextView text_welcome,text_dw;
+        CircleImageView img_facebbok,img_google;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         image = findViewById(R.id.image);

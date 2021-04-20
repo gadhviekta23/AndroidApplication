@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -15,13 +16,30 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SelectFCActivity extends AppCompatActivity {
 
-    CircleImageView circleImageView;
+    CircleImageView circleImageView,circleImageView1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_f_c);
         circleImageView = findViewById(R.id.cag_img1);
+        circleImageView1 = findViewById(R.id.cag_img2);
+//
+//        circleImageView1.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+//                    AnimationDrawable animation = (AnimationDrawable) circleImageView.getDrawable();
+//                    animation.stop();
+//                    animation.selectDrawable(0);
+//                    animation.start();
+//                    return true;
+//                }
+//                return false;
+//            }
+//
+//        });
+
 
         circleImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +50,8 @@ public class SelectFCActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
         public static void effect(View circleImageView )
         {
