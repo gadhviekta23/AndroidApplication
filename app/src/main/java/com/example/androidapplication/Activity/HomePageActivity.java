@@ -67,7 +67,7 @@ public class HomePageActivity extends AppCompatActivity {
                         case R.id.nav_home:
                             selectedFragment = new ForYouFragment();
                             break;
-                        case R.id.nav_favorites:
+                        case R.id.nav_person:
                             selectedFragment = new ForYouFragment();
                             break;
                         case R.id.nav_search:

@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.androidapplication.Activity.SettingActivity;
+import com.example.androidapplication.Activity.ViewVideoActivity;
 import com.example.androidapplication.Fragment.ForYouFragment;
 import com.example.androidapplication.Model.HomeItem;
 import com.example.androidapplication.Model.HomeItem_two;
@@ -60,7 +61,7 @@ public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHold
         holder.image_HIT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, SettingActivity.class);
+                Intent intent = new Intent(context, ViewVideoActivity.class);
                 context.startActivity(intent);
             }
         });
