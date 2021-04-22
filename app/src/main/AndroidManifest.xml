@@ -9,25 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Day1Theme.AndroidApplication">
-        <activity android:name=".Activity.NotificationActivity"></activity>
-        <activity android:name=".Activity.Close_account" />
-        <activity android:name=".Activity.Deactivate_account" />
-        <activity android:name=".Activity.Application_theme" />
-        <activity android:name=".Activity.Claimed_accounts" />
-        <activity android:name=".Activity.login_option" />
-        <activity android:name=".Activity.C_name" />
-        <activity android:name=".Activity.Business_type" />
-        <activity android:name=".Activity.Gender" />
-        <activity android:name=".Activity.Country" />
-        <activity android:name=".Activity.Password" />
-        <activity android:name=".Activity.Email_activity" />
-        <activity android:name=".Activity.Account_settings" />
-        <activity android:name=".Activity.Editprofile" />
-        <activity android:name=".Activity.Splash_Screen" />
+        <activity android:name=".Activity.email_activity"></activity>
+        <activity android:name=".Activity.activity_account_settings" />
+        <activity android:name=".Activity.editprofile" />
+        <activity android:name=".Activity.SettingActivity" />
         <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Fragment.SearchFragment" />
         <activity android:name=".Activity.SelectFCActivity" />
         <activity android:name=".Activity.HomePageActivity" />
-        <activity android:name=".Activity.SettingActivity">
+        <activity android:name=".Activity.Splash_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

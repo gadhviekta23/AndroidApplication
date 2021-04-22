@@ -10,7 +10,7 @@
         android:text="hellow Latest"
         android:gravity="center"
         android:layout_margin="10dp"
-        android:textSize="20dp"
+        android:textSize="15dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
 />
