@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import com.example.androidapplication.R;
 
-public class Country extends AppCompatActivity {
+public class CountryActivity extends AppCompatActivity {
 
     Button btn;
 
@@ -25,7 +25,7 @@ public class Country extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Country.this, Account_settings.class);
+                Intent intent=new Intent(CountryActivity.this, AccountSettingsActivity.class);
                 startActivity(intent);
             }
         });

@@ -49,7 +49,7 @@ public class SettingActivity extends AppCompatActivity {
         first.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SettingActivity.this, Editprofile.class);
+                Intent intent=new Intent(SettingActivity.this, EditProfileActivity.class);
                 startActivity(intent);
             }
         });
@@ -57,7 +57,7 @@ public class SettingActivity extends AppCompatActivity {
         second.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SettingActivity.this, Account_settings.class);
+                Intent intent=new Intent(SettingActivity.this, AccountSettingsActivity.class);
                startActivity(intent);
             }
         });

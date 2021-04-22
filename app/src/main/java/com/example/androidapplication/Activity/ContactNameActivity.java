@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.example.androidapplication.R;
 
-public class C_name extends AppCompatActivity {
+public class ContactNameActivity extends AppCompatActivity {
 
     Button btn,done_btn;
     TextView contact;
@@ -40,7 +40,7 @@ public class C_name extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(C_name.this, Account_settings.class);
+                Intent intent=new Intent(ContactNameActivity.this, AccountSettingsActivity.class);
                 startActivity(intent);
             }
         });

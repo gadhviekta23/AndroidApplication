@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.example.androidapplication.R;
 import com.mikhaellopez.circularimageview.CircularImageView;
 
-public class Deactivate_account extends AppCompatActivity {
+public class DeactivateAccountActivity extends AppCompatActivity {
 
     TextView deactivate_account,description,name,description_one;
     LinearLayout first;

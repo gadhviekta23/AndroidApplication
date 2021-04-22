@@ -7,44 +7,45 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import com.example.androidapplication.R;
 
-public class Application_theme extends AppCompatActivity {
+public class ClaimedAccountsActivity extends AppCompatActivity {
 
     Button btn;
-    LinearLayout theme;
-    RadioGroup app_theme;
-    RadioButton system_default,light,dark;
-
+    LinearLayout claimed_account;
+    TextView insta,youtube;
+    Switch  insta_switch,youtube_switch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_app_theme);
+        setContentView(R.layout.activity_claimed_accounts);
 
         //Button
         btn=findViewById(R.id.btn);
 
         //LinearLayout
-        theme=findViewById(R.id.theme);
+        claimed_account=findViewById(R.id.claimed_account);
 
-        //RadioGroup
-        app_theme=findViewById(R.id.app_theme);
+        //TextView
+        insta=findViewById(R.id.insta);
+        youtube=findViewById(R.id.youtube);
 
-        //RadioButton
-        system_default=findViewById(R.id.system_default);
-        light=findViewById(R.id.light);
-        dark=findViewById(R.id.dark);
+        //Switch
+        insta_switch=findViewById(R.id.insta_switch);
+        youtube_switch=findViewById(R.id.youtube_switch);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Application_theme.this, Account_settings.class);
+                Intent intent=new Intent(ClaimedAccountsActivity.this, AccountSettingsActivity.class);
                 startActivity(intent);
             }
         });
+
+
     }
 }

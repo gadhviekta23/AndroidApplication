@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Close_account">
+    tools:context=".Activity.CloseAccountActivity">
     <TextView
         android:id="@+id/close_account"
         android:layout_width="wrap_content"

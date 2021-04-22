@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.androidapplication.R;
 
-public class Close_account extends AppCompatActivity {
+public class CloseAccountActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
