@@ -15,4 +15,5 @@
     <color name="colorText">#353232</color>
     <color name="colorAccent">#ECDBDB</color>
     <color name="colorPrimary">#89D6FA</color>
+    <color name="dark">#FF353535</color>
 </resources>

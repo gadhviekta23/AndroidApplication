@@ -2,6 +2,7 @@ package com.example.androidapplication.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,6 +64,7 @@ public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHold
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, ViewVideoActivity.class);
+                intent.putExtra("image",homeItem_two.getImage());
                 context.startActivity(intent);
             }
         });

@@ -1,24 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activity.ViewVideoActivity"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:id="@+id/cons"
+    tools:context=".Activity.ViewVideoActivity">
 
-    <ScrollView
+
+<ImageView
+    android:id="@+id/view_image"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_marginTop="15dp"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:src="@drawable/nature1"
+    />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:textSize="10dp"
+        android:text="meet kalola"
+        android:src="@drawable/profilepic"
+        app:layout_constraintTop_toBottomOf="@+id/view_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/profile_img"
+        app:layout_constraintTop_toBottomOf="@+id/view_image"
+        android:layout_margin="10dp"
+        android:text="Mahek | Lifez Easy"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/profile_img"
+        app:layout_constraintTop_toBottomOf="@+id/name_text"
+        android:text="16k followers"
+        android:textSize="15dp"
+        android:layout_marginLeft="10dp"
+      />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/view_image"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="10dp"
+        android:text="Follow"
+        android:background="@drawable/button_bg"
+        />
+    <LinearLayout
+        android:id="@+id/linear1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/followers"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="vertical"
         >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="700dp"
-            android:src="@drawable/nature1"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:text="Best hindi song What's app \n Status Video"
+        />
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:text="Best song ever Ek ladki ko khidki se dekkha all \n time favourite for all generation for best \n what's app status"
+        />
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/like"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/heart"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/linear1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/linear1"
+        app:layout_constraintLeft_toRightOf="@id/like"
+        app:layout_constraintRight_toLeftOf="@id/bookmark"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:text="Visite"
+            android:textAllCaps="false"
+            android:background="@drawable/button_bg"
+            />
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:text="Save"
+            android:background="@drawable/button_bg"
+            android:layout_margin="10dp"
+            android:textAllCaps="false"
             />
 
 
+    </LinearLayout>
 
-    </ScrollView>
+    <ImageView
+        android:id="@+id/bookmark"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_bookmark"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/linear1"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/linear2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:text="Comments"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/comment"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="15dp"
+        android:text="Love this pin? Let Lifez Easy know!"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
