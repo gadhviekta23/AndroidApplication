@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.example.androidapplication.R;
 import com.mikhaellopez.circularimageview.CircularImageView;
 
-public class editprofile extends AppCompatActivity {
+public class EditProfileActivity extends AppCompatActivity {
 
     TextView fname_txt,surname_txt,username_txt,about_you_txt,location_txt,website_txt;
     Button btn,done_btn,edit_btn;
@@ -40,7 +40,7 @@ public class editprofile extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(editprofile.this, SettingActivity.class);
+                Intent intent=new Intent(EditProfileActivity.this, SettingActivity.class);
                 startActivity(intent);
             }
         });

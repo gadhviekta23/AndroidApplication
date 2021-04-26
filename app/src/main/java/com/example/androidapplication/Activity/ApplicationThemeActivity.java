@@ -12,7 +12,7 @@ import android.widget.RadioGroup;
 
 import com.example.androidapplication.R;
 
-public class application_theme extends AppCompatActivity {
+public class ApplicationThemeActivity extends AppCompatActivity {
 
     Button btn;
     LinearLayout theme;
@@ -42,7 +42,7 @@ public class application_theme extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(application_theme.this,activity_account_settings.class);
+                Intent intent=new Intent(ApplicationThemeActivity.this, AccountSettingsActivity.class);
                 startActivity(intent);
             }
         });

@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.example.androidapplication.R;
 
-public class login_option extends AppCompatActivity {
+public class LoginOptionActivity extends AppCompatActivity {
 
     Button btn;
     LinearLayout login_option;
@@ -41,7 +41,7 @@ public class login_option extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(login_option.this,activity_account_settings.class);
+                Intent intent=new Intent(LoginOptionActivity.this, AccountSettingsActivity.class);
                 startActivity(intent);
             }
         });

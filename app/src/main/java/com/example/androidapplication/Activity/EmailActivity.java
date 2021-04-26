@@ -6,44 +6,41 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.androidapplication.R;
 
-public class gender extends AppCompatActivity {
+public class EmailActivity extends AppCompatActivity {
 
     Button btn,done_btn;
-    RadioGroup gender_btn;
-    RadioButton male,female,non_binary;
-    LinearLayout gender;
+    LinearLayout email;
+    TextView email_txt;
+    EditText add_email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gender);
+        setContentView(R.layout.activity_email_activity);
 
         //Button
         btn=findViewById(R.id.btn);
         done_btn=findViewById(R.id.done_btn);
 
-        //RadioGroup
-        gender_btn=findViewById(R.id.gender_btn);
+        //LinerLayout
+        email=findViewById(R.id.email);
 
-        //RadioButton
-        male=findViewById(R.id.male);
-        female=findViewById(R.id.female);
-        non_binary=findViewById(R.id.non_binary);
+        //TextView
+        email_txt=findViewById(R.id.email_txt);
 
-        //LinearLayout
-        gender=findViewById(R.id.gender);
+        //EditText
+        add_email=findViewById(R.id.add_email);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(gender.this,activity_account_settings.class);
+                Intent intent=new Intent(EmailActivity.this, AccountSettingsActivity.class);
                 startActivity(intent);
             }
         });

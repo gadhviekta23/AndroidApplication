@@ -12,7 +12,7 @@ import android.widget.RadioGroup;
 
 import com.example.androidapplication.R;
 
-public class Business_type extends AppCompatActivity {
+public class BusinessTypeActivity extends AppCompatActivity {
 
     Button btn,done_btn;
     LinearLayout businesstype;
@@ -47,7 +47,7 @@ public class Business_type extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Business_type.this,activity_account_settings.class);
+                Intent intent=new Intent(BusinessTypeActivity.this, AccountSettingsActivity.class);
                 startActivity(intent);
             }
         });
