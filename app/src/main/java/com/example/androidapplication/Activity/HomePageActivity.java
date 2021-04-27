@@ -2,9 +2,7 @@ package com.example.androidapplication.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.OrientationHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -15,9 +13,7 @@ import android.widget.FrameLayout;
 import com.example.androidapplication.Adapter.HomeAdapter;
 import com.example.androidapplication.Adapter.HomeAdapterOne;
 import com.example.androidapplication.Fragment.ForYouFragment;
-import com.example.androidapplication.Fragment.SearchFragment;
 import com.example.androidapplication.Model.HomeItem;
-import com.example.androidapplication.Model.HomeItem_two;
 import com.example.androidapplication.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -71,7 +67,7 @@ public class HomePageActivity extends AppCompatActivity {
                             selectedFragment = new ForYouFragment();
                             break;
                         case R.id.nav_search:
-                            Intent intent = new Intent(HomePageActivity.this, SearchFragment.class);
+                            Intent intent = new Intent(HomePageActivity.this, SearchActivity.class);
                             startActivity(intent);
                             break;
                     }

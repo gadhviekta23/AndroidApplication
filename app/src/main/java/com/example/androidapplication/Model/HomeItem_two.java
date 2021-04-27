@@ -1,5 +1,7 @@
 package com.example.androidapplication.Model;
 
+import android.widget.MediaController;
+
 public class HomeItem_two {
     int image;
     String title;
@@ -15,12 +17,12 @@ public class HomeItem_two {
         this.line_number = line_number;
     }
 
-    public int getImage() {
-        return image;
-    }
-
     public void setImage(int image) {
         this.image = image;
+    }
+
+    public int getImage() {
+        return image;
     }
 
     public String getTitle() {

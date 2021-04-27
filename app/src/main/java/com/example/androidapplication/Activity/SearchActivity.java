@@ -1,4 +1,4 @@
-package com.example.androidapplication.Fragment;
+package com.example.androidapplication.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -13,7 +13,7 @@ import com.example.androidapplication.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchFragment extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
 
     List<SearchItem> myLists;
     RecyclerView rv;
