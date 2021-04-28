@@ -6,22 +6,64 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_margin="2dp">
 
-        <VideoView
-            android:id="@+id/video1"
-            android:layout_width="200dp"
-            android:layout_height="400dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="2dp">
+
+            <VideoView
+                android:id="@+id/video1"
+                android:layout_width="200dp"
+                android:layout_height="400dp"
+                />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Best Love whatsapp Status  Videos, Images|videoface"
+                android:textSize="15dp"
+                android:maxLines="2"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/dot"
+                android:layout_gravity="center|right"
+                />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/heart"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10k"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                />
+            </LinearLayout>
+        </LinearLayout>
 
         <VideoView
             android:id="@+id/video2"
             android:layout_width="200dp"
             android:layout_height="400dp"
-            android:layout_marginLeft="10dp" />
+         />
     </LinearLayout>
 
     <LinearLayout
@@ -33,14 +75,14 @@
             android:id="@+id/video3"
             android:layout_width="200dp"
             android:layout_height="400dp"
-            android:layout_marginTop="40dp" />
+            android:layout_marginTop="5dp" />
 
         <VideoView
             android:id="@+id/video4"
             android:layout_width="200dp"
             android:layout_height="400dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="40dp" />
+            android:layout_marginTop="5dp" />
     </LinearLayout>
 
     <!--    <androidx.recyclerview.widget.RecyclerView-->
