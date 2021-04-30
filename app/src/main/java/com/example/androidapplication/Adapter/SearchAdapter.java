@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,31 +13,31 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.androidapplication.Model.SearchItem;
 import com.example.androidapplication.R;
 
-import java.util.List;
+import java.util.ArrayList;
 
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder> {
 
-    private List<SearchItem> myListList;
+    private ArrayList<SearchItem> myListList;
     private Context ct;
 
-    public SearchAdapter(List<SearchItem> myListList, Context ct) {
+    public SearchAdapter(ArrayList<SearchItem> myListList, Context ct) {
         this.myListList = myListList;
         this.ct = ct;
     }
     @NonNull
     @Override
-    public ViewHolder    onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.search_item, parent, false);
-
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        SearchItem myList = myListList.get(position);
-        holder.imageView.setImageDrawable(ct.getResources().getDrawable(myList.getImage()));
+        final SearchItem searchItem = myListList.get(holder.getAdapterPosition());
+        holder.imageView.setImageResource(searchItem.getImage());
+        holder.textview_si.setText(searchItem.getText());
 
     }
 
@@ -47,9 +48,14 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView;
+        private TextView textview_si;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView=(ImageView)itemView.findViewById(R.id.myimage);
+            textview_si=(TextView)itemView.findViewById(R.id.textview_si);
+
         }
     }
+
 }

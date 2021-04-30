@@ -17,9 +17,9 @@
         <activity android:name=".Activity.SettingActivity" />
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.ViewVideoActivity" />
-        <activity android:name=".Activity.SearchActivity" />
         <activity android:name=".Activity.SelectFCActivity" />
         <activity android:name=".Activity.HomePageActivity" />
+        <activity android:name=".Activity.SearchActivity" />
         <activity android:name=".Activity.Splash_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
