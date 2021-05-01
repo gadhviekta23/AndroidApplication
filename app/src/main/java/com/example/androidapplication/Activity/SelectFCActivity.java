@@ -17,7 +17,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SelectFCActivity extends AppCompatActivity implements View.OnClickListener {
 
-    CircleImageView cag_img1, cag_img2;
+    CircleImageView cag_img1, cag_img2,cag_img4;
     Button button;
 
     @Override
@@ -26,6 +26,14 @@ public class SelectFCActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_select_f_c);
         cag_img1 = findViewById(R.id.cag_img1);
         cag_img2 = findViewById(R.id.cag_img2);
+        cag_img4 = findViewById(R.id.cag_img4);
+        cag_img4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(SelectFCActivity.this, Choose_board.class);
+                startActivity(in);
+            }
+        });
         button = findViewById(R.id.button);
 
         cag_img1.setOnClickListener(this);
@@ -91,6 +99,8 @@ public class SelectFCActivity extends AppCompatActivity implements View.OnClickL
                 Intent intentb = new Intent(getApplicationContext(), HomePageActivity.class);
                 startActivity(intentb);
                 break;
+
+
         }
 
     }
