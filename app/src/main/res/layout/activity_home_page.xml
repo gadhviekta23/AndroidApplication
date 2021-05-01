@@ -10,28 +10,20 @@
         android:id="@+id/recyclerview_homeone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:padding="5dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <!--    tools:listitem="@layout/home_itemone"-->
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/nestedScrollView"
+
+
+    <FrameLayout
+        android:id="@+id/framelayout_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/recyclerview_homeone">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerview_homeone"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:id="@+id/framelayout_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
         android:id="@+id/linerlayout"
@@ -53,15 +45,8 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/texts"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nestedScrollView"
-        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

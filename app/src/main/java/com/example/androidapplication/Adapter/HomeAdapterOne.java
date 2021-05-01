@@ -2,6 +2,7 @@ package com.example.androidapplication.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,21 +51,25 @@ public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHold
         holder.text_HIT.setText(homeItem_two.getTitle());
         holder.text_like.setText(homeItem_two.getLine_number());
 
-        MediaController mediaController = new MediaController(context);
-        mediaController.setAnchorView(holder.image_HIT);
-
         Glide.with(context)
                 .load(homeItem_two.getSetting())
                 .into(holder.setting_HIT);
-        Glide.with(context)
-                .load(homeItem_two.getImage())
-                .into(holder.image_HIT);
+//        Glide.with(context)
+//                .load(homeItem_two.getVideofile())
+//                .into(holder.image_HIT);
 
-        holder.image_HIT.setOnClickListener(new View.OnClickListener() {
+        Uri uri3 = Uri.parse(homeItem_two.getVideofile());
+        holder.video_HIT.setVideoURI(uri3);
+        holder.video_HIT.requestFocus();
+        holder.video_HIT.start();
+
+        Log.e("tag","=================== videofile = "+uri3);
+
+        holder.video_HIT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, ViewVideoActivity.class);
-                intent.putExtra("image",homeItem_two.getImage());
+                intent.putExtra("image",homeItem_two.getVideofile());
                 context.startActivity(intent);
             }
         });
@@ -85,12 +90,12 @@ public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView setting_HIT;
-        ImageView image_HIT;
+        VideoView video_HIT;
         TextView text_HIT, text_like;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            image_HIT = itemView.findViewById(R.id.image_HIT);
+            video_HIT = itemView.findViewById(R.id.video_HIT);
             text_HIT = itemView.findViewById(R.id.text_HIT);
             text_like = itemView.findViewById(R.id.text_like);
             setting_HIT = itemView.findViewById(R.id.setting_HIT);

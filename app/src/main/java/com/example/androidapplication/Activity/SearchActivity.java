@@ -28,11 +28,11 @@ public class SearchActivity extends AppCompatActivity {
         rv.setLayoutManager(new GridLayoutManager(this,2));
 
         ArrayList<SearchItem> myLists = new ArrayList<>();
-        myLists.add(new SearchItem(R.drawable.food,"Food menu design"));
-        myLists.add(new SearchItem(R.drawable.lifeskill,"Life Skill"));
+        myLists.add(new SearchItem(R.drawable.cake,"Food menu design"));
+        myLists.add(new SearchItem(R.drawable.rapsong,"Life Skill"));
         myLists.add(new SearchItem(R.drawable.cake,"Cake  Design"));
         myLists.add(new SearchItem(R.drawable.topsongs,"Rap Song"));
-        myLists.add(new SearchItem(R.drawable.hindisong,"Hindi Song"));
+        myLists.add(new SearchItem(R.drawable.topsongs,"Hindi Song"));
         myLists.add(new SearchItem(R.drawable.rapsong,"Pop Song"));
 
 
@@ -46,7 +46,7 @@ public class SearchActivity extends AppCompatActivity {
         searchItems.add(new SearchItem(R.drawable.nature2,"Old song"));
         searchItems.add(new SearchItem(R.drawable.pandas,"Panda Vdio"));
         searchItems.add(new SearchItem(R.drawable.education,"Education"));
-        searchItems.add(new SearchItem(R.drawable.hindisong,"Hindi Song"));
+        searchItems.add(new SearchItem(R.drawable.traveling,"Hindi Song"));
         searchItems.add(new SearchItem(R.drawable.rapsong,"Pop Song"));
         reccyleviewtwo_sf.setLayoutManager(new GridLayoutManager(this,2));
 

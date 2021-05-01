@@ -3,26 +3,26 @@ package com.example.androidapplication.Model;
 import android.widget.MediaController;
 
 public class HomeItem_two {
-    int image;
+    String videofile;
     String title;
     int like;
     int setting;
     String line_number;
 
-    public HomeItem_two(int image, String title, int like, String line_number ,int setting) {
-        this.image = image;
+    public HomeItem_two(String videofile, String title, int like, String line_number ,int setting) {
+        this.videofile = videofile;
         this.title = title;
         this.like = like;
         this.setting = setting;
         this.line_number = line_number;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public String getVideofile() {
+        return videofile;
     }
 
-    public int getImage() {
-        return image;
+    public void setVideofile(String videofile) {
+        this.videofile = videofile;
     }
 
     public String getTitle() {

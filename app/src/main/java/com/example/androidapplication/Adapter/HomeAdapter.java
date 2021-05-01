@@ -24,8 +24,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     private LayoutInflater inflater;
     ArrayList<HomeItem> homeItems;
     HomePageActivity homePageActivity;
-    int row_index = -1;
-
+    int row_index = 0;
 
     public HomeAdapter(ArrayList<HomeItem> homeItems, Context context, HomePageActivity homePageActivity) {
         this.context = context;
@@ -46,6 +45,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull HomeAdapter.ViewHolder holder, int position) {
         final HomeItem homeItem = homeItems.get(holder.getAdapterPosition());
         holder.h_text.setText(homeItem.getName());
+
         holder.h_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

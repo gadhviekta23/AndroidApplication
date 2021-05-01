@@ -1,5 +1,6 @@
 package com.example.androidapplication.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -19,7 +20,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
-public class HomePageActivity extends AppCompatActivity {
+public class HomePageActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     private FrameLayout frameLayout;
     public RecyclerView recyclerview_homeone, recyclerview_hometwo;
@@ -45,7 +46,7 @@ public class HomePageActivity extends AppCompatActivity {
 
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
-        bottomNav.setOnNavigationItemSelectedListener(navListener);
+        bottomNav.setOnNavigationItemSelectedListener(this);
         //I added this if statement to keep the selected fragment when rotating the device
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id,
@@ -54,33 +55,29 @@ public class HomePageActivity extends AppCompatActivity {
 
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
-            new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(MenuItem item) {
-                    Fragment selectedFragment = null;
-                    switch (item.getItemId()) {
-                        case R.id.nav_home:
-                            selectedFragment = new ForYouFragment();
-                            break;
-                        case R.id.nav_person:
-                            selectedFragment = new ForYouFragment();
-                            break;
-                        case R.id.nav_search:
-                            Intent intent = new Intent(HomePageActivity.this, SearchActivity.class);
-                            startActivity(intent);
-                            break;
-                    }
-                    getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id,
-                            selectedFragment).commit();
-                    return true;
-                }
-            };
-
-
     private void init() {
         frameLayout = findViewById(R.id.framelayout_id);
         recyclerview_homeone = findViewById(R.id.recyclerview_homeone);
+    }
+
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.nav_home:
+                loadFragment(new ForYouFragment());
+                break;
+            case R.id.nav_person:
+                loadFragment(new ForYouFragment());
+                break;
+            case R.id.nav_search:
+                Intent intent = new Intent(HomePageActivity.this, SearchActivity.class);
+                startActivity(intent);
+                break;
+        }
+
+        return true;
     }
 
     public void loadFragment(Fragment fragment) {
@@ -88,5 +85,4 @@ public class HomePageActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, fragment).commit();
         }
     }
-
 }
