@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -54,25 +55,22 @@ public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHold
         Glide.with(context)
                 .load(homeItem_two.getSetting())
                 .into(holder.setting_HIT);
-//        Glide.with(context)
-//                .load(homeItem_two.getVideofile())
-//                .into(holder.image_HIT);
 
         Uri uri3 = Uri.parse(homeItem_two.getVideofile());
         holder.video_HIT.setVideoURI(uri3);
         holder.video_HIT.requestFocus();
         holder.video_HIT.start();
 
-        Log.e("tag","=================== videofile = "+uri3);
 
-        holder.video_HIT.setOnClickListener(new View.OnClickListener() {
+        holder.constraintLayout_HIT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, ViewVideoActivity.class);
-                intent.putExtra("image",homeItem_two.getVideofile());
+                intent.putExtra("video", uri3.toString());
                 context.startActivity(intent);
             }
         });
+
         holder.setting_HIT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,6 +90,7 @@ public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHold
         ImageView setting_HIT;
         VideoView video_HIT;
         TextView text_HIT, text_like;
+        ConstraintLayout constraintLayout_HIT;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -99,6 +98,7 @@ public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHold
             text_HIT = itemView.findViewById(R.id.text_HIT);
             text_like = itemView.findViewById(R.id.text_like);
             setting_HIT = itemView.findViewById(R.id.setting_HIT);
+            constraintLayout_HIT = itemView.findViewById(R.id.constraintLayout_HIT);
         }
     }
 }
