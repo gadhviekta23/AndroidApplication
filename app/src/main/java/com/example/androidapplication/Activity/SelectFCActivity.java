@@ -32,6 +32,7 @@ public class SelectFCActivity extends AppCompatActivity implements View.OnClickL
             public void onClick(View v) {
                 Intent in = new Intent(SelectFCActivity.this, Choose_board.class);
                 startActivity(in);
+
             }
         });
         button = findViewById(R.id.button);
