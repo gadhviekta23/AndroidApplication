@@ -136,13 +136,13 @@ public class AccountSettingsActivity extends AppCompatActivity {
             }
         });
 
-        eleven.setOnClickListener(new View.OnClickListener() {
+        /*eleven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AccountSettingsActivity.this, ClaimedAccountsActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         twelve.setOnClickListener(new View.OnClickListener() {
             @Override
