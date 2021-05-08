@@ -2,6 +2,7 @@ package com.example.androidapplication.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,6 +32,7 @@ public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHold
     Context context;
     ArrayList<HomeItem_two> homeItem1;
     private LayoutInflater inflater;
+    int row_index = 0;
 
     public HomeAdapterOne(Context context, ArrayList<HomeItem_two> homeItem1) {
         this.context = context;
@@ -59,10 +61,20 @@ public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHold
         Uri uri3 = Uri.parse(homeItem_two.getVideofile());
         holder.video_HIT.setVideoURI(uri3);
         holder.video_HIT.requestFocus();
-        holder.video_HIT.start();
+        holder.video_HIT.getDuration();
+        holder.video_HIT.canPause();
+        holder.video_HIT.stopPlayback();
 
 
-        holder.constraintLayout_HIT.setOnClickListener(new View.OnClickListener() {
+        holder.video_HIT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                row_index = position;
+                notifyDataSetChanged();
+            }
+        });
+
+        holder.text_HIT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, ViewVideoActivity.class);
@@ -78,6 +90,14 @@ public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHold
                 context.startActivity(intent);
             }
         });
+
+        if(row_index==position){
+            holder.video_HIT.start();
+
+        }else{
+            holder.video_HIT.pause();
+
+        }
     }
 
     @Override
@@ -90,7 +110,6 @@ public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHold
         ImageView setting_HIT;
         VideoView video_HIT;
         TextView text_HIT, text_like;
-        ConstraintLayout constraintLayout_HIT;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -98,7 +117,6 @@ public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHold
             text_HIT = itemView.findViewById(R.id.text_HIT);
             text_like = itemView.findViewById(R.id.text_like);
             setting_HIT = itemView.findViewById(R.id.setting_HIT);
-            constraintLayout_HIT = itemView.findViewById(R.id.constraintLayout_HIT);
         }
     }
 }
