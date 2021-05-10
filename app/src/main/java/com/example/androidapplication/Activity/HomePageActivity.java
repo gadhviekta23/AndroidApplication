@@ -80,8 +80,8 @@ public class HomePageActivity extends AppCompatActivity implements BottomNavigat
                 startActivity(intent);
                 break;
             case R.id.nav_chat:
-                loadFragment(new LatestFragment());
-
+                Intent i = new Intent(HomePageActivity.this, Massage_Notification.class);
+                startActivity(i);
                 break;
             case R.id.nav_story:
                 BottomSheetDialogStory bottomsheet =new BottomSheetDialogStory();
