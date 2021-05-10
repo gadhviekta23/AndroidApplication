@@ -10,27 +10,31 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.example.androidapplication.Adapter.HomeAdapter;
 import com.example.androidapplication.Adapter.HomeAdapterOne;
 import com.example.androidapplication.Fragment.ForYouFragment;
+import com.example.androidapplication.Fragment.LatestFragment;
 import com.example.androidapplication.Model.HomeItem;
 import com.example.androidapplication.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
-public class HomePageActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class HomePageActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener ,BottomSheetDialogStory.BottomSheetListenerStoty  {
 
     private FrameLayout frameLayout;
     public RecyclerView recyclerview_homeone, recyclerview_hometwo;
     HomeAdapter homeAdapter;
     HomeAdapterOne homeAdapterOne;
+    TextView texts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+        texts = findViewById(R.id.text);
         init();
 
         ArrayList<HomeItem> homeItems = new ArrayList<>();
@@ -75,6 +79,15 @@ public class HomePageActivity extends AppCompatActivity implements BottomNavigat
                 Intent intent = new Intent(HomePageActivity.this, SearchActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.nav_chat:
+                loadFragment(new LatestFragment());
+
+                break;
+            case R.id.nav_story:
+                BottomSheetDialogStory bottomsheet =new BottomSheetDialogStory();
+                bottomsheet.show(getSupportFragmentManager(),"exampleBottomSheet");
+                break;
+
         }
 
         return true;
@@ -84,5 +97,10 @@ public class HomePageActivity extends AppCompatActivity implements BottomNavigat
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, fragment).commit();
         }
+    }
+
+    @Override
+    public void onButtonClicked(String text) {
+        texts.setText(text);
     }
 }

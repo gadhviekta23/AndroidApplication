@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 
@@ -21,9 +22,10 @@ import com.example.androidapplication.R;
 
 import java.util.ArrayList;
 
-public class ViewVideoActivity extends AppCompatActivity {
+public class ViewVideoActivity extends AppCompatActivity implements BottomSheetDialog.BottomSheetListener {
 VideoView view_image;
 Button btn_save;
+TextView comment;
 RecyclerView recyclerview_AVV;
 
 
@@ -32,6 +34,7 @@ RecyclerView recyclerview_AVV;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_video);
         view_image= findViewById(R.id.view_image);
+        comment= findViewById(R.id.comment);
         recyclerview_AVV= findViewById(R.id.recyclerview_AVV);
 
         Bundle extras = getIntent().getExtras();
@@ -46,7 +49,8 @@ RecyclerView recyclerview_AVV;
             @Override
             public void onClick(View v) {
                 BottomSheetDialog bottomsheet =new BottomSheetDialog();
-                bottomsheet.show(getSupportFragmentManager(),"BottomSheetDialog");
+                bottomsheet.show(getSupportFragmentManager(),"exampleBottomSheet");
+
             }
         });
         recyclerview_AVV_init();
@@ -65,6 +69,11 @@ RecyclerView recyclerview_AVV;
         recyclerview_AVV.setLayoutManager(new GridLayoutManager(this, 2));
 //        recyclerview_AVV.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         recyclerview_AVV.setAdapter(homeAdapterOne);
+    }
+
+    @Override
+    public void onButtonClicked(String text) {
+        comment.setText(text);
     }
 
 }

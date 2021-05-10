@@ -15,13 +15,16 @@ import com.example.androidapplication.R;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class BottomSheetDialog extends BottomSheetDialogFragment {
-TextView txt_download,close;
-Button btn_download;
-private BottomSheetListener mListener;
+    TextView txt_download, close;
+    Button btn_download;
+    private BottomSheetListener mListener;
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.bottom_sheet_layout, container, false);
+
         txt_download = v.findViewById(R.id.txt_download);
         close = v.findViewById(R.id.close);
         btn_download = v.findViewById(R.id.btn_download);
@@ -41,9 +44,11 @@ private BottomSheetListener mListener;
 
         return v;
     }
+
     public interface BottomSheetListener {
         void onButtonClicked(String text);
     }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
