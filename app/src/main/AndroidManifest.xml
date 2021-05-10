@@ -11,8 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Day1Theme.AndroidApplication">
-        <activity android:name=".Activity.BottomSheetDialogStory"></activity>
-        <activity android:name=".Activity.Choose_board" />
+        <activity android:name=".Activity.Choose_board"></activity>
         <activity android:name=".Activity.EmailActivity" />
         <activity android:name=".Activity.AccountSettingsActivity" />
         <activity android:name=".Activity.EditProfileActivity" />
