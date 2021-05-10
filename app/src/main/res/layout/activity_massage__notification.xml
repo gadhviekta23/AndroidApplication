@@ -15,7 +15,8 @@
         android:layout_margin="15dp"
         android:background="@drawable/gradient_border"
         android:backgroundTint="@color/orange"
-        android:drawableLeft="@drawable/ic__account"
+        android:drawableLeft="@drawable/ic_account"
+        android:drawableRight="@drawable/ic_settings"
         android:gravity="center"
         android:padding="5dp"
         android:text="My Pins"
@@ -33,6 +34,7 @@
         android:layout_marginTop="4dp"
         android:background="@drawable/gradient_border"
         android:drawableLeft="@drawable/ic_search"
+
         android:drawablePadding="10dp"
         android:hint="What are you Lokking For?"
         android:padding="5dp"
