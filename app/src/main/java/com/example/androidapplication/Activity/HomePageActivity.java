@@ -73,16 +73,18 @@ public class HomePageActivity extends AppCompatActivity implements BottomNavigat
                 loadFragment(new ForYouFragment());
                 break;
             case R.id.nav_person:
-                loadFragment(new ForYouFragment());
+                Intent i = new Intent(HomePageActivity.this, Massage_Notification.class);
+                startActivity(i);
                 break;
             case R.id.nav_search:
                 Intent intent = new Intent(HomePageActivity.this, SearchActivity.class);
                 startActivity(intent);
                 break;
+
             case R.id.nav_chat:
-                Intent i = new Intent(HomePageActivity.this, Massage_Notification.class);
-                startActivity(i);
+
                 break;
+
             case R.id.nav_story:
                 BottomSheetDialogStory bottomsheet =new BottomSheetDialogStory();
                 bottomsheet.show(getSupportFragmentManager(),"exampleBottomSheet");
