@@ -9,7 +9,7 @@ import android.widget.ListView;
 import com.example.androidapplication.Adapter.CustomAdapter;
 import com.example.androidapplication.R;
 
-public class Choose_board extends Activity {
+public class ChooseBoardActivity extends Activity {
     ListView simpleList;
     String boardList[] = {"Food menu design", "Food design ", "Drink design", "Food poster design", "Create board",};
     int food[] = {R.drawable.topsongs, R.drawable.pandas, R.drawable.rapsong, R.drawable.fashion, R.drawable.ic_plus};

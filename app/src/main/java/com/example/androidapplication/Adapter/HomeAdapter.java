@@ -51,14 +51,12 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             public void onClick(View v) {
                 homePageActivity.recyclerview_homeone.getLayoutManager().scrollToPosition(holder.getAdapterPosition());
 
-                if (holder.getAdapterPosition()==0){
-                    homePageActivity.loadFragment(new ForYouFragment());
+                int j;
+                      for(j = 0; j <= holder.getAdapterPosition() ; j++){
+                          homePageActivity.loadFragment(new ForYouFragment());
+                      }
 
-                }
-                else if (holder.getAdapterPosition()==1){
-                    homePageActivity.loadFragment(new LatestFragment());
 
-                }
                 row_index = position;
                 notifyDataSetChanged();
             }

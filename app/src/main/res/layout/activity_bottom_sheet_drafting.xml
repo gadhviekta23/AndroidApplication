@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BottomSheet.BottomSheetDrafting">
+
+    <TextView
+        android:id="@+id/keetDrafting_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keep Drafting ?"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue working on your most recent saves draft or start again with a new story pin"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/newStoryPin"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="New Story Pin"
+            android:backgroundTint="@color/gray"
+            android:background="@drawable/button_bg"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_bg"
+            android:text="use saved draft"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enjoing Story Pins? Share Facebook"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:padding="30dp"
+        />
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.androidapplication.Activity;
+package com.example.androidapplication.BottomSheet;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -17,8 +17,6 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 public class BottomSheetDialog extends BottomSheetDialogFragment {
     TextView txt_download, close;
     Button btn_download;
-    private BottomSheetListener mListener;
-
 
     @Nullable
     @Override
@@ -45,19 +43,5 @@ public class BottomSheetDialog extends BottomSheetDialogFragment {
         return v;
     }
 
-    public interface BottomSheetListener {
-        void onButtonClicked(String text);
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        try {
-            mListener = (BottomSheetListener) context;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(context.toString()
-                    + " must implement BottomSheetListener");
-        }
-    }
 
 }

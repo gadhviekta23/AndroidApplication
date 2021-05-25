@@ -3,6 +3,9 @@
     package="com.example.androidapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,19 +14,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Day1Theme.AndroidApplication">
-        <activity android:name=".Activity.Choose_board"></activity>
+        <activity android:name=".Activity.ExtendVideoActivity" />
+        <activity android:name=".Activity.ChooseBoardActivity" />
         <activity android:name=".Activity.EmailActivity" />
         <activity android:name=".Activity.AccountSettingsActivity" />
         <activity android:name=".Activity.EditProfileActivity" />
         <activity android:name=".Activity.SettingActivity" />
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.ViewVideoActivity" />
-        <activity android:name=".Activity.Massage_Notification"/>
+        <activity android:name=".Activity.Massage_Notification" />
         <activity android:name=".Activity.SelectFCActivity" />
         <activity android:name=".Activity.HomePageActivity" />
         <activity android:name=".Activity.SearchActivity" />
         <activity android:name=".Activity.Splash_Screen">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

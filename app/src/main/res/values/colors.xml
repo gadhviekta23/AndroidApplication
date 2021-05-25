@@ -17,4 +17,6 @@
     <color name="colorbottom">#ECDBDB</color>
     <color name="colorPrimary">#89D6FA</color>
     <color name="dark">#FF353535</color>
+    <color name="red">#D80404</color>
+    <color name="gray">#F1EEEE</color>
 </resources>

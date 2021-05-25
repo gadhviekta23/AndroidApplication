@@ -14,15 +14,17 @@ import android.widget.TextView;
 
 import com.example.androidapplication.Adapter.HomeAdapter;
 import com.example.androidapplication.Adapter.HomeAdapterOne;
+import com.example.androidapplication.BottomSheet.BottomSheetDialogStory;
+import com.example.androidapplication.BottomSheet.BottomSheetDrafting;
 import com.example.androidapplication.Fragment.ForYouFragment;
-import com.example.androidapplication.Fragment.LatestFragment;
+import com.example.androidapplication.Fragment.ProfileFragment;
 import com.example.androidapplication.Model.HomeItem;
 import com.example.androidapplication.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
-public class HomePageActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener ,BottomSheetDialogStory.BottomSheetListenerStoty  {
+public class HomePageActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener  {
 
     private FrameLayout frameLayout;
     public RecyclerView recyclerview_homeone, recyclerview_hometwo;
@@ -72,10 +74,11 @@ public class HomePageActivity extends AppCompatActivity implements BottomNavigat
             case R.id.nav_home:
                 loadFragment(new ForYouFragment());
                 break;
+
             case R.id.nav_person:
-                Intent i = new Intent(HomePageActivity.this, Massage_Notification.class);
-                startActivity(i);
+                loadFragment(new ProfileFragment());
                 break;
+
             case R.id.nav_search:
                 Intent intent = new Intent(HomePageActivity.this, SearchActivity.class);
                 startActivity(intent);
@@ -101,8 +104,4 @@ public class HomePageActivity extends AppCompatActivity implements BottomNavigat
         }
     }
 
-    @Override
-    public void onButtonClicked(String text) {
-        texts.setText(text);
-    }
 }

@@ -4,13 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.PorterDuff;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.androidapplication.Activity.HomePageActivity;
 import com.example.androidapplication.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -30,7 +28,7 @@ public class SelectFCActivity extends AppCompatActivity implements View.OnClickL
         cag_img4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(SelectFCActivity.this, Choose_board.class);
+                Intent in = new Intent(SelectFCActivity.this, ChooseBoardActivity.class);
                 startActivity(in);
 
             }

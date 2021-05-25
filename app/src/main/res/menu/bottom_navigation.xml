@@ -15,7 +15,7 @@
         android:id="@+id/nav_story"
         android:icon="@drawable/story"
         android:iconTint="@color/white"
-        android:title="Add Pin" />
+        android:title="Story" />
 
     <item
         android:id="@+id/nav_chat"
@@ -25,6 +25,6 @@
     <item
         android:id="@+id/nav_person"
         android:icon="@drawable/ic_person"
-        android:title="Favorites" />
+        android:title="Profile" />
 
 </menu>

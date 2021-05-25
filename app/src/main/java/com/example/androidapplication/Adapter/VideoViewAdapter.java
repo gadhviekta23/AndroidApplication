@@ -1,52 +1,39 @@
 package com.example.androidapplication.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import com.bumptech.glide.Glide;
-import com.example.androidapplication.Activity.SettingActivity;
-import com.example.androidapplication.Activity.ViewVideoActivity;
-import com.example.androidapplication.Fragment.ForYouFragment;
-import com.example.androidapplication.Model.HomeItem;
 import com.example.androidapplication.Model.HomeItem_two;
 import com.example.androidapplication.R;
 
 import java.util.ArrayList;
 
-public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHolder> {
+public class VideoViewAdapter extends RecyclerView.Adapter<VideoViewAdapter.ViewHolder> {
+    private LayoutInflater inflater;
     Context context;
     ArrayList<HomeItem_two> homeItem1;
-    private LayoutInflater inflater;
-    int row_index = 0;
 
-    public HomeAdapterOne(Context context, ArrayList<HomeItem_two> homeItem1) {
+    public VideoViewAdapter(Context context, ArrayList<HomeItem_two> homeItem1) {
+        this.inflater = LayoutInflater.from(context);
         this.context = context;
         this.homeItem1 = homeItem1;
-        this.inflater = LayoutInflater.from(context);
-
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
         View view = inflater.inflate(R.layout.home_itemtwo, viewGroup, false);
-        return new HomeAdapterOne.ViewHolder(view);
-    }
+        return new ViewHolder(view);    }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
@@ -60,58 +47,20 @@ public class HomeAdapterOne extends RecyclerView.Adapter<HomeAdapterOne.ViewHold
 
         Uri uri3 = Uri.parse(homeItem_two.getVideofile());
         holder.video_HIT.setVideoURI(uri3);
-        holder.video_HIT.requestFocus();
         holder.video_HIT.getDuration();
         holder.video_HIT.canPause();
         holder.video_HIT.stopPlayback();
 
-
-        holder.video_HIT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                row_index = position;
-
-                notifyDataSetChanged();
-            }
-        });
-
-        holder.text_HIT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, ViewVideoActivity.class);
-                intent.putExtra("video", uri3.toString());
-                context.startActivity(intent);
-            }
-        });
-
-        holder.setting_HIT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, SettingActivity.class);
-                context.startActivity(intent);
-            }
-        });
-
-        if(row_index==position){
-            holder.video_HIT.start();
-
-        }else{
-            holder.video_HIT.pause();
-
-        }
     }
 
     @Override
     public int getItemCount() {
-        return homeItem1.size();
-
-    }
+        return homeItem1.size();    }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView setting_HIT;
         VideoView video_HIT;
         TextView text_HIT, text_like;
-
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             video_HIT = itemView.findViewById(R.id.video_HIT);
