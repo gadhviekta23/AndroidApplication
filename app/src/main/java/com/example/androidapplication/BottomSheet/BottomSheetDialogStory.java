@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.androidapplication.Activity.BoardViewActivity;
 import com.example.androidapplication.Activity.PinViewActivity;
 import com.example.androidapplication.R;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
@@ -42,6 +43,13 @@ public class BottomSheetDialogStory extends BottomSheetDialogFragment {
                 startActivityForResult(intent, PICK_IMAGE_MULTIPLE);
 
 
+            }
+        });
+        txt_board.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), BoardViewActivity.class);
+                startActivity(intent);
             }
         });
         return v;

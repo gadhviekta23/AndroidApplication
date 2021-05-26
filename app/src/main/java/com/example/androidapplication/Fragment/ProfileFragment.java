@@ -22,6 +22,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         setting_PF = view.findViewById(R.id.setting_PF);
         setting_PF.setOnClickListener(this);
         return view;
+
     }
 
     @Override
@@ -30,6 +31,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             case R.id.setting_PF:
                 Intent intent = new Intent(getContext(), SettingActivity.class);
                 startActivity(intent);
+
                 break;
         }
     }
