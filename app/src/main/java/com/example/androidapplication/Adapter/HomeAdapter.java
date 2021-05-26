@@ -1,6 +1,5 @@
 package com.example.androidapplication.Adapter;
 
-import android.app.Application;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -13,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidapplication.Activity.HomePageActivity;
 import com.example.androidapplication.Fragment.ForYouFragment;
-import com.example.androidapplication.Fragment.LatestFragment;
 import com.example.androidapplication.Model.HomeItem;
 import com.example.androidapplication.R;
 
@@ -26,7 +24,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     HomePageActivity homePageActivity;
     int row_index = 0;
 
-    public HomeAdapter(ArrayList<HomeItem> homeItems, Context context, HomePageActivity homePageActivity) {
+
+    public HomeAdapter(ArrayList<HomeItem> homeItems, Context context, HomePageActivity homePageActivitye) {
         this.context = context;
         this.inflater = LayoutInflater.from(context);
         this.homeItems = homeItems;
@@ -50,12 +49,10 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 homePageActivity.recyclerview_homeone.getLayoutManager().scrollToPosition(holder.getAdapterPosition());
-
                 int j;
                       for(j = 0; j <= holder.getAdapterPosition() ; j++){
                           homePageActivity.loadFragment(new ForYouFragment());
                       }
-
 
                 row_index = position;
                 notifyDataSetChanged();
@@ -71,7 +68,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
         }
     }
 
-
     @Override
     public int getItemCount() {
         return homeItems.size();
@@ -83,5 +79,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             super(itemView);
             h_text =itemView.findViewById(R.id.h_text);
         }
+    }
+    public interface OnVideoListItemClick {
+        void onItemClick(HomeItem homeItems);
     }
 }

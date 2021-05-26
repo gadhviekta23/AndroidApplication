@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -27,7 +28,7 @@ import java.util.ArrayList;
 public class HomePageActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener  {
 
     private FrameLayout frameLayout;
-    public RecyclerView recyclerview_homeone, recyclerview_hometwo;
+    public RecyclerView recyclerview_homeone;
     HomeAdapter homeAdapter;
     HomeAdapterOne homeAdapterOne;
     TextView texts;
@@ -72,23 +73,27 @@ public class HomePageActivity extends AppCompatActivity implements BottomNavigat
 
         switch (item.getItemId()) {
             case R.id.nav_home:
+                recyclerview_homeone.setVisibility(View.VISIBLE);
                 loadFragment(new ForYouFragment());
                 break;
 
             case R.id.nav_person:
+                recyclerview_homeone.setVisibility(View.VISIBLE);
                 loadFragment(new ProfileFragment());
                 break;
 
             case R.id.nav_search:
+                recyclerview_homeone.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(HomePageActivity.this, SearchActivity.class);
                 startActivity(intent);
                 break;
 
             case R.id.nav_chat:
-
+                recyclerview_homeone.setVisibility(View.VISIBLE);
                 break;
 
             case R.id.nav_story:
+                visiblerecyclerviewone();
                 BottomSheetDialogStory bottomsheet =new BottomSheetDialogStory();
                 bottomsheet.show(getSupportFragmentManager(),"exampleBottomSheet");
                 break;
@@ -97,6 +102,14 @@ public class HomePageActivity extends AppCompatActivity implements BottomNavigat
 
         return true;
     }
+
+    private void visiblerecyclerviewone() {
+        if (recyclerview_homeone.getVisibility() == View.VISIBLE){
+            recyclerview_homeone.setVisibility(View.GONE);
+        }
+
+    }
+
 
     public void loadFragment(Fragment fragment) {
         if (fragment != null) {

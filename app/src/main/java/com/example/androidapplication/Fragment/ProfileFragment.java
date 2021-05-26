@@ -21,7 +21,6 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
 
         setting_PF = view.findViewById(R.id.setting_PF);
         setting_PF.setOnClickListener(this);
-
         return view;
     }
 

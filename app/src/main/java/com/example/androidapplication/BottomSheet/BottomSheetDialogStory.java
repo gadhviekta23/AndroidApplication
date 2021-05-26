@@ -18,6 +18,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class BottomSheetDialogStory extends BottomSheetDialogFragment {
     TextView story_BSDS,txt_pin,txt_board;
+    private final int PICK_IMAGE_MULTIPLE = 1;
 
 
     @Nullable
@@ -38,7 +39,8 @@ public class BottomSheetDialogStory extends BottomSheetDialogFragment {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(getContext(), PinViewActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, PICK_IMAGE_MULTIPLE);
+
 
             }
         });
