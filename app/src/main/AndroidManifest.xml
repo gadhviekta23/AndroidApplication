@@ -3,7 +3,7 @@
     package="com.example.androidapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -14,6 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Day1Theme.AndroidApplication">
+        <activity android:name=".Activity.PinViewActivity"></activity>
         <activity android:name=".Activity.ExtendVideoActivity" />
         <activity android:name=".Activity.ChooseBoardActivity" />
         <activity android:name=".Activity.EmailActivity" />
