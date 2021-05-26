@@ -25,6 +25,9 @@ TextView addpin;
             public void onClick(View v) {
                 Intent intent =new Intent(getApplicationContext(), BottomSheetDialogStory.class);
                 startActivity(intent);
+
+
+
             }
         });
 
