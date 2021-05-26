@@ -39,6 +39,7 @@ public class BottomSheetDialogStory extends BottomSheetDialogFragment {
             public void onClick(View v) {
                 Intent intent =new Intent(getContext(), PinViewActivity.class);
                 startActivity(intent);
+
             }
         });
         return v;
