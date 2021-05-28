@@ -41,8 +41,6 @@ public class BottomSheetDialogStory extends BottomSheetDialogFragment {
             public void onClick(View v) {
                 Intent intent =new Intent(getContext(), PinViewActivity.class);
                 startActivityForResult(intent, PICK_IMAGE_MULTIPLE);
-
-
             }
         });
         txt_board.setOnClickListener(new View.OnClickListener() {

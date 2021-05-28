@@ -77,11 +77,6 @@ public class HomePageActivity extends AppCompatActivity implements BottomNavigat
                 loadFragment(new ForYouFragment());
                 break;
 
-            case R.id.nav_person:
-                recyclerview_homeone.setVisibility(View.VISIBLE);
-                loadFragment(new ProfileFragment());
-                break;
-
             case R.id.nav_search:
                 recyclerview_homeone.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(HomePageActivity.this, SearchActivity.class);
@@ -93,9 +88,14 @@ public class HomePageActivity extends AppCompatActivity implements BottomNavigat
                 break;
 
             case R.id.nav_story:
-                visiblerecyclerviewone();
+                recyclerview_homeone.setVisibility(View.VISIBLE);
                 BottomSheetDialogStory bottomsheet =new BottomSheetDialogStory();
                 bottomsheet.show(getSupportFragmentManager(),"exampleBottomSheet");
+                break;
+
+            case R.id.nav_person:
+                visiblerecyclerviewone();
+                loadFragment(new ProfileFragment());
                 break;
 
         }
@@ -104,10 +104,9 @@ public class HomePageActivity extends AppCompatActivity implements BottomNavigat
     }
 
     private void visiblerecyclerviewone() {
-        if (recyclerview_homeone.getVisibility() == View.VISIBLE){
+        if (recyclerview_homeone.getVisibility() == View.VISIBLE) {
             recyclerview_homeone.setVisibility(View.GONE);
         }
-
     }
 
 

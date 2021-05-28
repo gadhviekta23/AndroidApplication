@@ -8,26 +8,83 @@
     android:orientation="vertical"
     tools:context=".Activity.PinViewActivity">
 
-    <TextView
-        android:id="@+id/addvideo"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_margin="10dp"
         android:background="@drawable/gradient_border"
         android:backgroundTint="@color/orange"
+        android:layout_margin="10dp"
+
+        >
+
+    <ImageView
+        android:id="@+id/account_PF"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_account"
+        android:layout_margin="10dp"
         android:gravity="center"
-        android:padding="5dp"
+        />
+
+
+    <TextView
+        android:id="@+id/My_pins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
         android:text="Add Video"
+        android:layout_centerInParent="true"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/setting_PF"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Next"
+        android:padding="5dp"
+        android:layout_alignParentRight="true"
+        />
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/addimage"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:padding="5dp"
         android:src="@drawable/nature"
         android:scaleType="fitXY"
         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/btnSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="10dp"
+            android:text="Select"
+            android:textColor="@color/design_default_color_error" />
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/grdImages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:numColumns="4" />
+
+
 
 </LinearLayout>
