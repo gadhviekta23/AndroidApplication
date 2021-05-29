@@ -24,6 +24,9 @@ public class GenderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gender);
 
+
+
+
         //Button
         btn=findViewById(R.id.btn);
         done_btn=findViewById(R.id.done_btn);
