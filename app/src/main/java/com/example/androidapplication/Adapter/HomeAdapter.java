@@ -29,7 +29,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
         this.context = context;
         this.inflater = LayoutInflater.from(context);
         this.homeItems = homeItems;
-        this.homePageActivity = homePageActivity;
+        this.homePageActivity = homePageActivitye;
     }
 
 
