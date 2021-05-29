@@ -36,6 +36,8 @@ public class GenderActivity extends AppCompatActivity {
         female=findViewById(R.id.female);
         non_binary=findViewById(R.id.non_binary);
 
+
+
         //LinearLayout
         gender=findViewById(R.id.gender);
 
