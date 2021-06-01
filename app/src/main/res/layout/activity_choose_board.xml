@@ -17,20 +17,17 @@
 
         <ImageView
             android:id="@+id/account_PF"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/leftarrow"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            />
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back_arrow"
+            android:layout_margin="5dp"
+            android:padding="5dp"/>
 
 
         <TextView
             android:id="@+id/My_pins"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:gravity="center"
             android:text="Choose Board"
             android:layout_centerInParent="true"
             android:textColor="@color/white"
@@ -39,7 +36,6 @@
 
 
     </RelativeLayout>
-
 
 
     <ListView

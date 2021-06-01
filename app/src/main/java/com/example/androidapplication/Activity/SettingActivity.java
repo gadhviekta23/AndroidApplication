@@ -1,17 +1,20 @@
 package com.example.androidapplication.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
+import com.example.androidapplication.Fragment.ForYouFragment;
 import com.example.androidapplication.R;
 
-public class SettingActivity extends AppCompatActivity {
+public class SettingActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView setting_txt,personal_txt,edit_txt,account_txt,notification_txt,privacy_txt,action_txt,add_txt,log_txt;
     Button btn,edit_btn,account_btn,notification_btn,privacy_btn;
@@ -43,8 +46,9 @@ public class SettingActivity extends AppCompatActivity {
         first=findViewById(R.id.first);
         second=findViewById(R.id.second);
         third=findViewById(R.id.third);
-
         forth=findViewById(R.id.forth);
+
+        btn.setOnClickListener(this);
 
         first.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,4 +75,15 @@ public class SettingActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btn:
+                finish();
+                break;
+        }
+
+    }
+
 }

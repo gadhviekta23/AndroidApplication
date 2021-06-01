@@ -61,14 +61,14 @@
                         android:src="@drawable/expand"
                         app:tint="@color/orange" />
                     <ImageView
-                        android:id="@+id/arrowleft"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:id="@+id/arrowleft_AVV"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:padding="10dp"
                         android:src="@drawable/leftarrow"
-                        app:tint="@color/orange" />
+                     />
 
                 </RelativeLayout>
 

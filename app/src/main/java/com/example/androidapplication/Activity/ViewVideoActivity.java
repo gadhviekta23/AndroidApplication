@@ -25,7 +25,7 @@ public class ViewVideoActivity extends AppCompatActivity implements View.OnClick
     VideoView view_image;
     Button btn_save;
     TextView comment;
-    ImageView dowload_AVV, extend_AVV;
+    ImageView dowload_AVV, extend_AVV, arrowleft_AVV;
     RecyclerView recyclerview_AVV;
     VideoViewAdapter videoViewAdapter;
     Uri myUri;
@@ -39,10 +39,14 @@ public class ViewVideoActivity extends AppCompatActivity implements View.OnClick
         dowload_AVV = findViewById(R.id.dowload_AVV);
         btn_save = findViewById(R.id.btn_save);
         extend_AVV = findViewById(R.id.extend_AVV);
+        arrowleft_AVV = findViewById(R.id.arrowleft_AVV);
+        recyclerview_AVV = findViewById(R.id.recyclerview_AVV);
+
 
         btn_save.setOnClickListener(this);
         extend_AVV.setOnClickListener(this);
         dowload_AVV.setOnClickListener(this);
+        arrowleft_AVV.setOnClickListener(this);
 
 
         Bundle extras = getIntent().getExtras();
@@ -54,19 +58,19 @@ public class ViewVideoActivity extends AppCompatActivity implements View.OnClick
         recyclerview_AVV_init();
     }
 
-     void recyclerview_AVV_init() {
-        recyclerview_AVV = findViewById(R.id.recyclerview_AVV);
+    void recyclerview_AVV_init() {
         ArrayList<HomeItem_two> homeItem_twos = new ArrayList<>();
         homeItem_twos.add(new HomeItem_two("android.resource://com.example.androidapplication/" + R.raw.videotwo, "this is image", R.drawable.heart, "1k", R.drawable.dot));
         homeItem_twos.add(new HomeItem_two("android.resource://com.example.androidapplication/" + R.raw.videotwo, "this is image", R.drawable.heart, "1k", R.drawable.dot));
         homeItem_twos.add(new HomeItem_two("android.resource://com.example.androidapplication/" + R.raw.videotwo, "this is image", R.drawable.heart, "1k", R.drawable.dot));
         homeItem_twos.add(new HomeItem_two("android.resource://com.example.androidapplication/" + R.raw.videotwo, "this is image", R.drawable.heart, "1k", R.drawable.dot));
 
-        videoViewAdapter  = new VideoViewAdapter(getApplicationContext(), homeItem_twos);
+        videoViewAdapter = new VideoViewAdapter(getApplicationContext(), homeItem_twos);
 //        recyclerview_AVV.setLayoutManager(new GridLayoutManager(this, 2));
-        recyclerview_AVV.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-         recyclerview_AVV.setNestedScrollingEnabled(false);
-         recyclerview_AVV.setAdapter(videoViewAdapter);
+        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        recyclerview_AVV.setLayoutManager(staggeredGridLayoutManager);
+        staggeredGridLayoutManager.scrollToPosition(0);
+        recyclerview_AVV.setAdapter(videoViewAdapter);
     }
 
     @Override
@@ -87,6 +91,10 @@ public class ViewVideoActivity extends AppCompatActivity implements View.OnClick
                 in.putExtra("videoextent", myUri.toString());
                 startActivity(in);
 
+                break;
+            case R.id.arrowleft_AVV:
+                Intent b = new Intent(ViewVideoActivity.this, HomePageActivity.class);
+                startActivity(b);
                 break;
         }
     }

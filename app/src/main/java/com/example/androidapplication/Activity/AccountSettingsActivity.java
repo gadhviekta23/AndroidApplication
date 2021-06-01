@@ -14,9 +14,8 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 
 public class AccountSettingsActivity extends AppCompatActivity {
 
-    LinearLayout first,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen;
-    TextView account_settings_txt,name_txt,email_txt,password_txt,country_txt,gender_txt,business_type,contact_name,login_txt,claimed_account_txt,app_theme_txt,deactivate_account_txt,close_account_txt;
-    Button btn,email_btn,password_btn,country_btn,gender_btn,business_type_btn,contact_name_btn,login_btn,claimed_account_btn,app_theme_btn,deactivate_account_btn,close_account_btn;
+    TextView name_txt,email_txt,password_txt,country_txt,gender_txt,business_type,contact_name,login_txt,claimed_account_txt,app_theme_txt,deactivate_account_txt,close_account_txt;
+    Button btn;
     CircularImageView profile_image;
 
     @Override
@@ -24,24 +23,8 @@ public class AccountSettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_settings);
 
-        //LinearLayout
-        first=findViewById(R.id.first);
-        two=findViewById(R.id.two);
-        three=findViewById(R.id.three);
-        four=findViewById(R.id.four);
-        five=findViewById(R.id.five);
-        six=findViewById(R.id.six);
-        seven=findViewById(R.id.seven);
-        eight=findViewById(R.id.eight);
-        nine=findViewById(R.id.nine);
-        ten=findViewById(R.id.ten);
-        eleven=findViewById(R.id.eleven);
-        twelve=findViewById(R.id.twelve);
-        thirteen=findViewById(R.id.thirteen);
-        fourteen=findViewById(R.id.fourteen);
 
         //TextView
-        account_settings_txt=findViewById(R.id.account_settings_txt);
         name_txt=findViewById(R.id.name_txt);
         email_txt=findViewById(R.id.email_txt);
         password_txt=findViewById(R.id.password_txt);
@@ -57,54 +40,42 @@ public class AccountSettingsActivity extends AppCompatActivity {
 
         //Button
         btn=findViewById(R.id.btn);
-        email_btn=findViewById(R.id.email_btn);
-        password_btn=findViewById(R.id.password_btn);
-        country_btn=findViewById(R.id.country_btn);
-        gender_btn=findViewById(R.id.gender_btn);
-        business_type_btn=findViewById(R.id.business_type_btn);
-        contact_name_btn=findViewById(R.id.contact_name_btn);
-        login_btn=findViewById(R.id.login_btn);
-        claimed_account_btn=findViewById(R.id.claimed_account_btn);
-        app_theme_btn=findViewById(R.id.app_theme_btn);
-        deactivate_account_btn=findViewById(R.id.deactivate_account_btn);
-        close_account_btn=findViewById(R.id.close_account_btn);
+        email_txt=findViewById(R.id.email_txt);
 
-        //CircularImageView
-//        profile_image=findViewById(R.id.profile_image);
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(AccountSettingsActivity.this,SettingActivity.class);
-                startActivity(intent);
+              finish();
             }
         });
 
-        four.setOnClickListener(new View.OnClickListener() {
+        email_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(AccountSettingsActivity.this, EmailActivity.class);
+                Intent intent=new Intent(getApplicationContext(), EmailActivity.class);
                 startActivity(intent);
             }
         });
 
-        five.setOnClickListener(new View.OnClickListener() {
+        password_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(AccountSettingsActivity.this, PasswordActivity.class);
+                Intent intent=new Intent(getApplicationContext(), PasswordActivity.class);
                 startActivity(intent);
             }
         });
 
-        six.setOnClickListener(new View.OnClickListener() {
+        country_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(AccountSettingsActivity.this, CountryActivity.class);
+                Intent intent=new Intent(getApplicationContext(), CountryActivity.class);
                 startActivity(intent);
             }
         });
 
-        seven.setOnClickListener(new View.OnClickListener() {
+        gender_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AccountSettingsActivity.this, GenderActivity.class);
@@ -112,7 +83,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
             }
         });
 
-        eight.setOnClickListener(new View.OnClickListener() {
+        business_type.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AccountSettingsActivity.this, BusinessTypeActivity.class);
@@ -120,7 +91,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
             }
         });
 
-        nine.setOnClickListener(new View.OnClickListener() {
+        contact_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AccountSettingsActivity.this, ContactNameActivity.class);
@@ -128,7 +99,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
             }
         });
 
-        ten.setOnClickListener(new View.OnClickListener() {
+        login_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AccountSettingsActivity.this, LoginOptionActivity.class);
@@ -136,15 +107,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
             }
         });
 
-        /*eleven.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(AccountSettingsActivity.this, ClaimedAccountsActivity.class);
-                startActivity(intent);
-            }
-        });*/
-
-        twelve.setOnClickListener(new View.OnClickListener() {
+        app_theme_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AccountSettingsActivity.this, ApplicationThemeActivity.class);
@@ -152,7 +115,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
             }
         });
 
-        thirteen.setOnClickListener(new View.OnClickListener() {
+        deactivate_account_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AccountSettingsActivity.this, DeactivateAccountActivity.class );
@@ -160,7 +123,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
             }
         });
 
-        fourteen.setOnClickListener(new View.OnClickListener() {
+        close_account_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AccountSettingsActivity.this, CloseAccountActivity.class );

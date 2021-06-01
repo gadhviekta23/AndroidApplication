@@ -58,6 +58,8 @@ private GridView grdImages;
             ids[i] = imagecursor.getInt(image_column_index);
             int dataColumnIndex = imagecursor.getColumnIndex(MediaStore.Images.Media.DATA);
             arrPath[i] = imagecursor.getString(dataColumnIndex);
+            Log.e("tag", "================++++++++++++ "+arrPath[i]);
+
         }
         imageAdapter = new ImageAdapter();
         grdImages.setAdapter(imageAdapter);
@@ -71,7 +73,7 @@ private GridView grdImages;
                 String selectImages = "";
                 for (int i = 0; i < len; i++) {
                     if (thumbnailsselection[i]) {
-                        cnt++;
+
                         selectImages = selectImages + arrPath[i] + "|";
                     }
                 }
@@ -81,6 +83,8 @@ private GridView grdImages;
 
                     Log.d("SelectedImages", selectImages);
                     addimage.setImageResource(Integer.parseInt(selectImages));
+                    String a = selectImages;
+                    Log.e("tag","============== === " +a);
 //                    Intent i = new Intent(getApplication(), CreateFolderActivity.class);
 //                    i.putExtra("data", selectImages);
 //                    startActivity(i);

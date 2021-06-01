@@ -10,31 +10,35 @@ import android.widget.VideoView;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.androidapplication.Activity.ProfileActivity;
 import com.example.androidapplication.Activity.SettingActivity;
 import com.example.androidapplication.R;
 
 public class ProfileFragment extends Fragment implements View.OnClickListener {
-    ImageView setting_PF;
+    ImageView setting_PF, account;
     View view;
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        view= inflater.inflate(R.layout.fragment_profile, container, false);
+
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         setting_PF = view.findViewById(R.id.setting_PF);
+        account = view.findViewById(R.id.account);
         setting_PF.setOnClickListener(this);
+        account.setOnClickListener(this);
         return view;
 
     }
 
-
-
-
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.setting_PF:
                 Intent intent = new Intent(getContext(), SettingActivity.class);
                 startActivity(intent);
-
+                break;
+            case R.id.account:
+                Intent i = new Intent(getContext(), ProfileActivity.class);
+                startActivity(i);
                 break;
         }
     }

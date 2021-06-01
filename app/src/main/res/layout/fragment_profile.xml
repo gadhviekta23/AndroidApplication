@@ -1,37 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
+    android:layout_height="match_parent"
+    android:background="@color/gray1"
     android:orientation="vertical">
-
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:id="@+id/relativeLayout"
         android:background="@drawable/gradient_border"
         android:backgroundTint="@color/orange"
-        android:layout_margin="10dp"
-
-        >
+        android:layout_margin="10dp">
 
         <ImageView
-            android:id="@+id/account_PF"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:id="@+id/account"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
             android:src="@drawable/profileimage"
-            android:layout_margin="10dp"
             android:gravity="center"
             />
-
 
         <TextView
             android:id="@+id/My_pins"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
             android:gravity="center"
             android:text="My Pins"
             android:layout_centerInParent="true"
@@ -41,29 +35,46 @@
 
         <ImageView
             android:id="@+id/setting_PF"
-            android:layout_width="wrap_content"
+            android:layout_width="40dp"
             android:layout_height="match_parent"
             android:src="@drawable/settingimage"
-            android:layout_margin="10dp"
+            android:padding="10dp"
             android:gravity="center"
             android:layout_alignParentRight="true"
             />
 
     </RelativeLayout>
 
-    <EditText
+
+
+    <TextView
         android:id="@+id/textView"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/gradient_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradent_white"
+        android:hint="What are you looking for ?"
+        android:padding="10dp"
         android:drawableLeft="@drawable/ic_search"
         android:drawablePadding="10dp"
-        android:hint="What are you Lokking For?"
-        android:textColor="@color/colorText"
-        android:padding="10dp"
-        android:textSize="15sp"
-        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:layout_below="@id/relativeLayout"
         />
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/add_button"
+            android:padding="10dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            />
+
+</RelativeLayout>

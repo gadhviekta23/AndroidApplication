@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,6 +33,9 @@ public class BottomSheetDialogStory extends BottomSheetDialogFragment {
         story_BSDS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                story_BSDS.setTextColor(getResources().getColor(android.R.color.holo_orange_dark));
+                txt_board.setTextColor(getResources().getColor(android.R.color.black));
+                txt_pin.setTextColor(getResources().getColor(android.R.color.black));
                 BottomSheetDrafting bottomSheetDrafting =new BottomSheetDrafting();
                 bottomSheetDrafting.show(getFragmentManager(),"exampleBottomSheet");
             }
@@ -39,6 +43,9 @@ public class BottomSheetDialogStory extends BottomSheetDialogFragment {
         txt_pin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                txt_pin.setTextColor(getResources().getColor(android.R.color.holo_orange_dark));
+                story_BSDS.setTextColor(getResources().getColor(android.R.color.black));
+                txt_board.setTextColor(getResources().getColor(android.R.color.black));
                 Intent intent =new Intent(getContext(), PinViewActivity.class);
                 startActivityForResult(intent, PICK_IMAGE_MULTIPLE);
             }
@@ -46,6 +53,9 @@ public class BottomSheetDialogStory extends BottomSheetDialogFragment {
         txt_board.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                txt_board.setTextColor(getResources().getColor(android.R.color.holo_orange_dark));
+                txt_pin.setTextColor(getResources().getColor(android.R.color.black));
+                story_BSDS.setTextColor(getResources().getColor(android.R.color.black));
                 Intent intent = new Intent(getContext(), BoardViewActivity.class);
                 startActivity(intent);
             }

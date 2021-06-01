@@ -51,7 +51,6 @@ public class HomePageActivity extends AppCompatActivity implements BottomNavigat
         recyclerview_homeone.setLayoutManager(new LinearLayoutManager(getApplication(), RecyclerView.HORIZONTAL, false));
         recyclerview_homeone.setAdapter(homeAdapter);
 
-
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(this);
         //I added this if statement to keep the selected fragment when rotating the device
