@@ -13,8 +13,9 @@
     >
     <ImageView
         android:id="@+id/closeimage"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:src="@drawable/ic_baseline_close"
         android:backgroundTint="@color/black"
         android:layout_margin="10dp"
@@ -24,7 +25,8 @@
         android:layout_height="wrap_content"
         android:text="Create board"
         android:textSize="20dp"
-        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:layout_margin="6dp"
         android:textStyle="bold"
         />
 
@@ -35,12 +37,12 @@
        >
     <Button
         android:id="@+id/nextbtn"
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="40dp"
-        android:text="Next"
-
+        android:layout_margin="6dp"
         android:textAllCaps="false"
-        android:layout_margin="10dp"
+        android:text="Next"
+        android:layout_gravity="center"
         android:background="@drawable/button_bg"
         />
    </LinearLayout>
@@ -56,8 +58,10 @@
         android:layout_margin="10dp"
         />
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Add a title."
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         />
 </LinearLayout>
