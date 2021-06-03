@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Day1Theme.AndroidApplication">
-        <activity android:name=".Activity.BoardViewActivity"></activity>
+        <activity android:name=".Activity.CreateStoryActivity"></activity>
+        <activity android:name=".Activity.BoardViewActivity" />
         <activity android:name=".Activity.PinViewActivity" />
         <activity android:name=".Activity.ExtendVideoActivity" />
         <activity android:name=".Activity.ChooseBoardActivity" />

@@ -20,6 +20,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_profile, container, false);
+        String strtext = getArguments().getString("edttext");
 
         setting_PF = view.findViewById(R.id.setting_PF);
         account = view.findViewById(R.id.account);

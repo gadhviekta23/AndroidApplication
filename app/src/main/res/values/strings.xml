@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndroidApplication</string>
+    <string name="give_your_pin_a_title">Give your pin a title</string>
+    <string name="description">Description</string>
+    <string name="say_more_about_your_pin">Say more about your pin</string>
+    <string name="description_website">description Website</string>
 </resources>

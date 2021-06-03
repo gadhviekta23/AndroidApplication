@@ -1,6 +1,8 @@
 package com.example.androidapplication.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
@@ -28,6 +30,7 @@ public class ViewVideoActivity extends AppCompatActivity implements View.OnClick
     ImageView dowload_AVV, extend_AVV, arrowleft_AVV;
     RecyclerView recyclerview_AVV;
     VideoViewAdapter videoViewAdapter;
+    NestedScrollView nestedscrollview;
     Uri myUri;
 
     @Override
@@ -41,6 +44,7 @@ public class ViewVideoActivity extends AppCompatActivity implements View.OnClick
         extend_AVV = findViewById(R.id.extend_AVV);
         arrowleft_AVV = findViewById(R.id.arrowleft_AVV);
         recyclerview_AVV = findViewById(R.id.recyclerview_AVV);
+        nestedscrollview = findViewById(R.id.nestedscrollview);
 
 
         btn_save.setOnClickListener(this);
@@ -54,11 +58,9 @@ public class ViewVideoActivity extends AppCompatActivity implements View.OnClick
         view_image.setVideoURI(myUri);
         view_image.requestFocus();
         view_image.start();
+        nestedscrollview.fullScroll(View.FOCUS_UP);
+        nestedscrollview.smoothScrollTo(0,0);
 
-        recyclerview_AVV_init();
-    }
-
-    void recyclerview_AVV_init() {
         ArrayList<HomeItem_two> homeItem_twos = new ArrayList<>();
         homeItem_twos.add(new HomeItem_two("android.resource://com.example.androidapplication/" + R.raw.videotwo, "this is image", R.drawable.heart, "1k", R.drawable.dot));
         homeItem_twos.add(new HomeItem_two("android.resource://com.example.androidapplication/" + R.raw.videotwo, "this is image", R.drawable.heart, "1k", R.drawable.dot));
@@ -67,11 +69,13 @@ public class ViewVideoActivity extends AppCompatActivity implements View.OnClick
 
         videoViewAdapter = new VideoViewAdapter(getApplicationContext(), homeItem_twos);
 //        recyclerview_AVV.setLayoutManager(new GridLayoutManager(this, 2));
-        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
-        recyclerview_AVV.setLayoutManager(staggeredGridLayoutManager);
-        staggeredGridLayoutManager.scrollToPosition(0);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);
+        recyclerview_AVV.setLayoutManager(gridLayoutManager);
+        recyclerview_AVV.setNestedScrollingEnabled(false);
         recyclerview_AVV.setAdapter(videoViewAdapter);
     }
+
+
 
     @Override
     public void onClick(View v) {
