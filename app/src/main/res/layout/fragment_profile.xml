@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/gray1"
     android:orientation="vertical">
 
@@ -65,23 +66,18 @@
         android:layout_below="@id/relativeLayout"
         />
 
+
+
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView"
-
-        />
-
-        <ImageView
-            android:id="@+id/imageview"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@drawable/add_button"
-            android:padding="10dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginBottom="100dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            />
+        android:id="@+id/imageview"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="102dp"
+        android:padding="10dp"
+        android:src="@drawable/add_button" />
 
 </RelativeLayout>

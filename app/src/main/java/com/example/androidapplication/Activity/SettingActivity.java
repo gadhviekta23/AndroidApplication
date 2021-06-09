@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -19,6 +21,7 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
     TextView setting_txt,personal_txt,edit_txt,account_txt,notification_txt,privacy_txt,action_txt,add_txt,log_txt;
     Button btn,edit_btn,account_btn,notification_btn,privacy_btn;
     LinearLayout first,second,third,forth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         add_txt=findViewById(R.id.add_txt);
         log_txt=findViewById(R.id.log_txt);
 
+
         //Button
         btn=findViewById(R.id.btn);
         edit_btn=findViewById(R.id.edit_btn);
@@ -49,6 +53,10 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         forth=findViewById(R.id.forth);
 
         btn.setOnClickListener(this);
+
+//        Bundle bundle = getIntent().getExtras();
+//        int resId = bundle.getInt("imagehh");
+
 
         first.setOnClickListener(new View.OnClickListener() {
             @Override

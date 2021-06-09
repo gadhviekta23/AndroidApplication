@@ -58,6 +58,7 @@ public class BottomSheetDialogStory extends BottomSheetDialogFragment {
                 story_BSDS.setTextColor(getResources().getColor(android.R.color.black));
                 Intent intent = new Intent(getContext(), BoardViewActivity.class);
                 startActivity(intent);
+
             }
         });
         return v;

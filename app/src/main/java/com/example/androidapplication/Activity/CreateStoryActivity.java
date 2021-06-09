@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,14 +20,14 @@ import android.provider.MediaStore.Video.Thumbnails;
 import com.example.androidapplication.Fragment.ProfileFragment;
 import com.example.androidapplication.R;
 
+import java.io.Serializable;
+
 public class CreateStoryActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageView btn_back_AS,thumbnails_CS;
     TextView next_CS;
     VideoView video_AS;
     Uri img,uri;
-    Bitmap bmThumbnail;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,16 +40,10 @@ public class CreateStoryActivity extends AppCompatActivity implements View.OnCli
         btn_back_AS.setOnClickListener(this);
         next_CS.setOnClickListener(this);
 
+
         final String VideoUrl=getIntent().getExtras().getString("image");
         Uri uri = Uri.parse(VideoUrl);
-        bmThumbnail = ThumbnailUtils.createVideoThumbnail(VideoUrl,Thumbnails.MINI_KIND);
-        thumbnails_CS.setImageBitmap(bmThumbnail);
-        Log.e("tag","===========bmThumbnail= "+bmThumbnail);
-        Log.e("tag","===========VideoUrl= "+VideoUrl);
 
-
-//        Uri uri = getIntent().getParcelableExtra("imageUri");
-        Log.e("tag","===========image= "+img);
         video_AS.setVideoURI(uri);
         video_AS.start();
         video_AS.requestFocus();
@@ -63,13 +59,11 @@ public class CreateStoryActivity extends AppCompatActivity implements View.OnCli
                 finish();
                 break;
             case R.id.next_CS:
-                String VideoUri= uri.toString();
-                Bundle bundle = new Bundle();
-                bundle.putString("edttext", VideoUri);
-                ProfileFragment fragobj = new ProfileFragment();
-                fragobj.setArguments(bundle);
+                Intent intent = new Intent(this, ProfileActivity.class);
+                startActivity(intent);
                 break;
         }
     }
+
 
 }
