@@ -9,10 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.androidapplication.Activity.OpenVideoActivity;
+import com.example.androidapplication.Activity.ViewBoardActivity;
 import com.example.androidapplication.Model.StoryItem;
 import com.example.androidapplication.R;
 
@@ -52,14 +54,23 @@ public class ProfileFragmentAdapter extends RecyclerView.Adapter<ProfileFragment
                 .load(storyItem.getImage_two())
                 .into(holder.image_two_IFP);
 
-        holder.image_IFP.setOnClickListener(new View.OnClickListener() {
+//        holder.image_IFP.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(context, OpenVideoActivity.class);
+//                context.startActivity(intent);
+//            }
+//        });
+        holder.text_IFP.setText(storyItem.getText());
+
+        holder.carview_IFP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, OpenVideoActivity.class);
+                Intent intent = new Intent(context, ViewBoardActivity.class);
                 context.startActivity(intent);
             }
         });
-        holder.text_IFP.setText(storyItem.getText());
+
     }
 
     @Override
@@ -70,6 +81,7 @@ public class ProfileFragmentAdapter extends RecyclerView.Adapter<ProfileFragment
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView image_IFP, image_ome_IFP, image_two_IFP;
         TextView text_IFP;
+        CardView carview_IFP;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -77,6 +89,8 @@ public class ProfileFragmentAdapter extends RecyclerView.Adapter<ProfileFragment
             image_ome_IFP = itemView.findViewById(R.id.image_ome_IFP);
             text_IFP = itemView.findViewById(R.id.text_IFP);
             image_two_IFP = itemView.findViewById(R.id.image_two_IFP);
+            carview_IFP = itemView.findViewById(R.id.carview_IFP);
+
         }
     }
 }
