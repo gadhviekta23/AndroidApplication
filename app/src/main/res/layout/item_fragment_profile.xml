@@ -42,6 +42,7 @@
                     app:layout_constraintLeft_toRightOf="@id/image_IFP"
                     app:layout_constraintTop_toTopOf="parent" />
 
+
                 <ImageView
                     android:id="@+id/image_two_IFP"
                     android:layout_width="70dp"
