@@ -13,7 +13,6 @@ public class StoryItem {
         this.text=text;
     }
 
-
     public int getImage() {
         return image;
     }

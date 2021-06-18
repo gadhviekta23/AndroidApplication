@@ -12,6 +12,7 @@ import com.example.androidapplication.R;
 public class Splash_Screen extends AppCompatActivity {
     ImageView splash_image;
     Handler handler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
